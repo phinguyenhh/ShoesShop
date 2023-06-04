@@ -1,0 +1,34 @@
+
+//! Chỉ chứa đường dẫn tới file con để biên dịch code của file con thành 1 file main duy nhất
+
+//Vendor (import file scss, riêng file css gắn ở html)
+
+
+//Helper
+@import "./Helper/variables";
+@import "./Helper/minxin";
+
+//Base
+@import "./Base/reset";
+@import "./Base/customize";
+@import "./Base/responsive";//không cần dùng
+
+//components
+@import "./Components/button";
+
+//layouts
+@import "./Layouts/header";
+@import "./Layouts/carousel";
+@import "./Layouts/feature";
+@import "./Layouts/detail";
+@import "./Layouts/realate";
+@import "./Layouts/carts";
+@import "./Layouts/register";
+@import "./Layouts/footer";
+
+
+//Pages
+
+//Theme
+
+
