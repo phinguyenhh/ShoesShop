@@ -38,14 +38,14 @@ header .form-inline .btn {
   outline: 0;
   right: 26px;
   color: #ffffff;
-  padding: 4px 24px;
+  padding: 4px 24px 3px 24px;
   border-top-right-radius: 24px;
   border-bottom-right-radius: 24px;
   background: linear-gradient(-180deg, #D31027, #EA384D);
   transition: all 0.5s;
 }
 header .form-inline .btn:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 header .leftHeader i {
   color: #ffffff;
@@ -66,7 +66,7 @@ header .leftHeader .btn:hover i, header .leftHeader .btn:hover span {
 header .cart {
   position: relative;
 }
-header .cartNumber {
+header .cart .cartNumber {
   position: absolute;
   top: -13px;
   right: 33px;
@@ -78,4 +78,101 @@ header .cartNumber {
   font-size: 12px;
   font-weight: 700;
   line-height: none;
+}
+
+.detailShoes .img {
+  position: relative;
+  background-image: url(../img/shoes2.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 100%;
+}
+.detailShoes .saleOff {
+  position: absolute;
+  display: flex;
+  width: 45px;
+  height: 47px;
+  padding-left: 7.5px;
+  line-height: 20px;
+  background-color: red;
+  color: #ffffff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.detailShoes h2 {
+  font-weight: 300;
+}
+.detailShoes p {
+  color: #140101;
+  margin-bottom: 5px;
+}
+.detailShoes span {
+  color: #1ed90e;
+  font-size: 24px;
+}
+.detailShoes .sizeDetail {
+  margin: 20px 0;
+}
+.detailShoes .sizeDetail .btn {
+  font-size: 24px;
+  font-weight: 600;
+}
+.detailShoes .sizeDetail .btn.active {
+  border: 1px solid red;
+  border-radius: 0;
+}
+.detailShoes .price .discount {
+  position: relative;
+  top: -6px;
+  background-color: #F94C43;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 4px 11px;
+}
+.detailShoes .price .cost {
+  padding: 0 10px;
+  font-size: 35px;
+  font-weight: 500;
+  text-decoration: line-through;
+  color: #cbc9c9;
+}
+.detailShoes .price .sale {
+  font-size: 40px;
+  font-weight: 700;
+  color: #FF0000;
+}
+.detailShoes .quantity {
+  padding: 15px 0;
+}
+.detailShoes .quantity .btn {
+  padding: 5px 20px;
+  font-size: 24px;
+  border: 1px solid #fc0303;
+  color: #fc0303;
+}
+.detailShoes .quantity span {
+  position: relative;
+  top: 6px;
+  padding: 0 10px;
+  color: #000000;
+  text-align: center;
+}
+.detailShoes .addCart button {
+  width: 175px;
+  height: 65px;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: #fc0303;
+  border: none;
+  transition: all 0.5s;
+  border-radius: 8px;
+}
+.detailShoes .addCart button:hover {
+  opacity: 0.8;
 }/*# sourceMappingURL=main.css.map */

@@ -24,13 +24,13 @@ header {
         outline: 0;
         right: 26px;
         color: $color-white-7;
-        padding: 4px 24px;
+        padding: 4px 24px 3px 24px;
         border-top-right-radius: 24px;
         border-bottom-right-radius: 24px;
         background: linear-gradient(-180deg, $color-red-4, $color-red-5);
         transition: all 0.5s;
         &:hover {
-            opacity: 0.9;
+            opacity: 0.8;
         }
     }
     .leftHeader {
