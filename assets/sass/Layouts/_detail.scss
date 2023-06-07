@@ -1,0 +1,68 @@
+header {
+    background: linear-gradient(-180deg, $color-red-4, $color-red-5);
+
+    .navbar-brand {
+        @include styleText($color-white-7, $fs-8, $fw-6, $lh-1);
+        text-align: center;
+        letter-spacing: 3px;
+        margin: 0;
+    }
+    .navbar .form-inline .form-control {
+        width: 100%;
+        border-radius: 24px;
+        border-color: transparent;
+        &:focus {
+            background-color: none;
+            border-color: transparent;
+            outline: 0;
+            box-shadow: none;
+            animation: all 5s;
+        }
+    }
+    .form-inline .btn {
+        position: absolute;
+        outline: 0;
+        right: 26px;
+        color: $color-white-7;
+        padding: 4px 24px;
+        border-top-right-radius: 24px;
+        border-bottom-right-radius: 24px;
+        background: linear-gradient(-180deg, $color-red-4, $color-red-5);
+        transition: all 0.5s;
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+    .leftHeader i {
+        color: $color-white-7;
+        font-size: 20px;
+        margin-right: 4px;
+        outline: none;
+        border-color: transparent;
+        transition: all 0.5s;
+    }
+    .leftHeader span {
+        font-size: 16px;
+        color: $color-white-7;
+        transition: all 0.5s;
+    }
+    .leftHeader .btn {
+        &:hover i,
+        &:hover span {
+            opacity: 0.7;
+        }
+    }
+    .cart {
+        position: relative;
+    }
+    .cartNumber {
+        position: absolute;
+        top: -13px;
+        right: 33px;
+        padding: 0.5px 4px;
+        border: 2px solid $color-red-4;
+        border-radius: 12px;
+        background-color: $color-white-7;
+        @include styleText($color-red-1, $fs-1 - 2px, $fw-6, none);
+    }
+}
