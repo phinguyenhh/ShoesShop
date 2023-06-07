@@ -5,10 +5,77 @@
 }
 
 html, body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
 }
 
-header .navbar-toggler {
-  background-color: #2a73dd;
-  color: #f5f9fe;
+header {
+  background: linear-gradient(-180deg, #D31027, #EA384D);
+}
+header .navbar-brand {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 3px;
+  margin: 0;
+}
+header .navbar .form-inline .form-control {
+  width: 100%;
+  border-radius: 24px;
+  border-color: transparent;
+}
+header .navbar .form-inline .form-control:focus {
+  background-color: none;
+  border-color: transparent;
+  outline: 0;
+  box-shadow: none;
+  animation: all 5s;
+}
+header .form-inline .btn {
+  position: absolute;
+  outline: 0;
+  right: 26px;
+  color: #ffffff;
+  padding: 4px 24px;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  background: linear-gradient(-180deg, #D31027, #EA384D);
+  transition: all 0.5s;
+}
+header .form-inline .btn:hover {
+  opacity: 0.9;
+}
+header .leftHeader i {
+  color: #ffffff;
+  font-size: 20px;
+  margin-right: 4px;
+  outline: none;
+  border-color: transparent;
+  transition: all 0.5s;
+}
+header .leftHeader span {
+  font-size: 16px;
+  color: #ffffff;
+  transition: all 0.5s;
+}
+header .leftHeader .btn:hover i, header .leftHeader .btn:hover span {
+  opacity: 0.7;
+}
+header .cart {
+  position: relative;
+}
+header .cartNumber {
+  position: absolute;
+  top: -13px;
+  right: 33px;
+  padding: 0.5px 4px;
+  border: 2px solid #D31027;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #fc0303;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: none;
 }/*# sourceMappingURL=main.css.map */
