@@ -1,5 +1,5 @@
 .detailShoes {
-    .img {
+    .imgDetail {
         position: relative;
         background-image: url(../img/shoes2.png);
         background-position: center center;
@@ -55,8 +55,8 @@
         }
     }
 
-    .price {
-        .discount {
+    .priceDetail {
+        .discountDetail {
             position: relative;
             top: -6px;
             background-color: $color-red-6;
@@ -65,26 +65,30 @@
             color: $color-white-7;
             padding: 4px 11px;
         }
-        .cost {
+        .costDetail {
             padding: 0 10px;
             font-size: 35px;
             font-weight: 500;
             text-decoration: line-through;
             color: $color-white-6;
         }
-        .sale {
+        .saleDetail {
             font-size: 40px;
             font-weight: 700;
             color: $color-red-7;
         }
     }
-    .quantity {
+    .quantityDetail {
         padding: 15px 0;
         .btn {
             padding: 5px 20px;
             font-size: 24px;
             border: 1px solid $color-red-1;
             color: $color-red-1;
+            &:hover {
+                background-color: rgb(255, 187, 187);                
+                
+            }
         }
         span {
             position: relative;
@@ -92,9 +96,9 @@
             padding: 0 10px;
             color: $color-dark-1;
             text-align: center;
-        }        
+        }
     }
-    .addCart {
+    .addCartDetail {
         button {
             width: 175px;
             height: 65px;
@@ -106,7 +110,7 @@
             transition: all 0.5s;
             border-radius: 8px;
             &:hover {
-                opacity: 0.8;
+                opacity: 0.7;
             }
         }
     }

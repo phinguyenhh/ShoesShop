@@ -9,6 +9,10 @@ html, body {
   font-style: normal;
 }
 
+button:focus {
+  box-shadow: none !important;
+}
+
 header {
   background: linear-gradient(-180deg, #D31027, #EA384D);
 }
@@ -47,6 +51,9 @@ header .form-inline .btn {
 header .form-inline .btn:hover {
   opacity: 0.8;
 }
+header .form-inline .btn:focus-visible {
+  outline: 0;
+}
 header .leftHeader i {
   color: #ffffff;
   font-size: 20px;
@@ -80,7 +87,7 @@ header .cart .cartNumber {
   line-height: none;
 }
 
-.detailShoes .img {
+.detailShoes .imgDetail {
   position: relative;
   background-image: url(../img/shoes2.png);
   background-position: center center;
@@ -125,7 +132,7 @@ header .cart .cartNumber {
   border: 1px solid red;
   border-radius: 0;
 }
-.detailShoes .price .discount {
+.detailShoes .priceDetail .discountDetail {
   position: relative;
   top: -6px;
   background-color: #F94C43;
@@ -134,35 +141,38 @@ header .cart .cartNumber {
   color: #ffffff;
   padding: 4px 11px;
 }
-.detailShoes .price .cost {
+.detailShoes .priceDetail .costDetail {
   padding: 0 10px;
   font-size: 35px;
   font-weight: 500;
   text-decoration: line-through;
   color: #cbc9c9;
 }
-.detailShoes .price .sale {
+.detailShoes .priceDetail .saleDetail {
   font-size: 40px;
   font-weight: 700;
   color: #FF0000;
 }
-.detailShoes .quantity {
+.detailShoes .quantityDetail {
   padding: 15px 0;
 }
-.detailShoes .quantity .btn {
+.detailShoes .quantityDetail .btn {
   padding: 5px 20px;
   font-size: 24px;
   border: 1px solid #fc0303;
   color: #fc0303;
 }
-.detailShoes .quantity span {
+.detailShoes .quantityDetail .btn:hover {
+  background-color: rgb(255, 187, 187);
+}
+.detailShoes .quantityDetail span {
   position: relative;
   top: 6px;
   padding: 0 10px;
   color: #000000;
   text-align: center;
 }
-.detailShoes .addCart button {
+.detailShoes .addCartDetail button {
   width: 175px;
   height: 65px;
   color: #ffffff;
@@ -173,6 +183,78 @@ header .cart .cartNumber {
   transition: all 0.5s;
   border-radius: 8px;
 }
-.detailShoes .addCart button:hover {
-  opacity: 0.8;
+.detailShoes .addCartDetail button:hover {
+  opacity: 0.7;
+}
+
+.realateShoes {
+  padding-top: 80px;
+  text-align: center;
+}
+.realateShoes .productRealate {
+  background-color: #f8f8f8;
+  width: 335px;
+  height: 370px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.realateShoes .productRealate:hover {
+  box-shadow: #989898 0px 0px 20px;
+}
+.realateShoes .imgRealate {
+  background-image: url(../img/shoes2.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+}
+.realateShoes h1 {
+  padding-bottom: 50px;
+}
+.realateShoes h2 {
+  font-weight: 300;
+  text-align: left;
+  padding-left: 25px;
+}
+.realateShoes p {
+  text-align: left;
+  color: #cbc9c9;
+  font-size: 20px;
+  padding-left: 25px;
+  margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.realateShoes .price {
+  text-align: left;
+  padding-left: 30px;
+}
+.realateShoes .costRealate {
+  padding: 0 10px;
+  font-size: 35px;
+  font-weight: 500;
+  text-decoration: line-through;
+  color: #cbc9c9;
+}
+.realateShoes .priceRealate {
+  font-size: 40px;
+  font-weight: 700;
+  color: #FF0000;
+  padding-right: 20px;
+}
+.realateShoes .bannerSale {
+  position: absolute;
+  left: 11px;
+  top: 10px;
+  background-image: url(../img/badge-on-sale.svg);
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 50px;
+  color: #ffffff;
+  font-weight: 800;
 }/*# sourceMappingURL=main.css.map */

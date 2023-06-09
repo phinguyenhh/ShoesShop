@@ -32,6 +32,9 @@ header {
         &:hover {
             opacity: 0.8;
         }
+        &:focus-visible{
+            outline: 0;
+        }
     }
     .leftHeader {
         i {
