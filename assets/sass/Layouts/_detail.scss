@@ -1,7 +1,6 @@
 .detailShoes {
     .imgDetail {
         position: relative;
-        background-image: url(../img/shoes2.png);
         background-position: center center;
         background-repeat: no-repeat;
         background-color: $color-white-1;
@@ -40,6 +39,7 @@
     span {
         color: $color-green-1;
         font-size: 24px;
+      
     }
 
     .sizeDetail {
@@ -80,6 +80,7 @@
     }
     .quantityDetail {
         padding: 15px 0;
+        display: flex;
         .btn {
             padding: 5px 20px;
             font-size: 24px;
@@ -91,11 +92,14 @@
             }
         }
         span {
+            display: block;
             position: relative;
+            width: 50px;
             top: 6px;
-            padding: 0 10px;
+            padding: 0 0px;
             color: $color-dark-1;
             text-align: center;
+            
         }
     }
     .addCartDetail {
