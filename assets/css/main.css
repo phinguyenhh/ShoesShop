@@ -4,9 +4,11 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   font-family: "Inter", sans-serif;
   font-style: normal;
+  overflow: visible;
 }
 
 button:focus {
@@ -15,6 +17,11 @@ button:focus {
 
 header {
   background: linear-gradient(-180deg, #D31027, #EA384D);
+  position: sticky;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 100;
 }
 header .navbar-brand {
   color: #ffffff;
@@ -268,4 +275,426 @@ header .cart .cartNumber {
   height: 50px;
   color: #ffffff;
   font-weight: 800;
+}
+
+#signUp #passwordConfirmSignUp + label {
+  width: 134px;
+}
+#signUp h2 {
+  text-align: center;
+  padding: 50px 0 25px 0;
+}
+#signUp .form-group .input-group input {
+  border-radius: 5px;
+}
+#signUp .form-control {
+  display: block;
+  width: 50px;
+  border-radius: 5px;
+}
+#signUp .form-control:focus {
+  background-color: none;
+  border: 1px solid #6181f3;
+  outline: 0;
+  box-shadow: none;
+  box-shadow: 0 3px 2px rgba(188, 188, 197, 0.5);
+  transition: 0.5s;
+}
+#signUp .form-control:focus + label {
+  top: -50%;
+  transform: translate3d(0, 50%, 0) scale(0.9);
+  transition: 0.2s;
+  transform-origin: left;
+}
+#signUp .form-control:focus + label .inputLogin {
+  top: 10px;
+  padding: 0 5px;
+  margin: 0 5px;
+  transition: 0.2s;
+}
+#signUp input.active + label {
+  top: -50%;
+  transform: translate3d(0, 50%, 0) scale(0.9);
+}
+#signUp input.active + label .inputLogin {
+  top: 10px;
+  padding: 0 5px;
+  margin: 0 5px;
+  transition: 0.2s;
+}
+#signUp label {
+  position: absolute;
+  cursor: text;
+  z-index: 25;
+  top: 0;
+  transform: translate3d(0, 50%, 0);
+  transition: 0.2s;
+}
+#signUp .input-group {
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+#signUp .inputLogin {
+  position: absolute;
+  top: 7px;
+  left: 13px;
+  font-size: 14px;
+  transition: 0.2s;
+  background-color: #ffffff;
+}
+#signUp .passConfirm {
+  width: 134px;
+}
+#signUp .signInSignUp {
+  display: flex;
+  padding: 0 55px;
+  justify-content: space-between;
+}
+#signUp .signInSignUp .signIn {
+  padding: 5px 30px;
+  background-color: #ff424e;
+  border: 1px solid #e74c3c;
+  border-radius: 24px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+#signUp .signInSignUp .signIn:hover {
+  opacity: 0.8;
+}
+#signUp .signInSignUp .signUp {
+  font-size: 14px;
+  color: #6181f3;
+  transition: all 0.5s;
+  border: none;
+  background-color: white;
+}
+#signUp .signInSignUp .signUp:hover {
+  text-decoration: underline;
+  color: #3e20f8;
+}
+#signUp .checkGender {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+#signUp .checkGender h6 {
+  font-weight: 400;
+}
+#signUp .checkGender .male {
+  margin-right: 35px;
+  margin-left: 35px;
+}
+#signUp .checkGender input[type=radio] {
+  margin-right: 5px;
+  height: 15px;
+  width: 15px;
+}
+#signUp .register button {
+  position: absolute;
+  width: 100%;
+  border: none;
+  background-color: #01cc65;
+  padding: 5px 0;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+#signUp .register button:hover {
+  opacity: 0.9;
+  box-shadow: #989898 0px 0px 3px;
+}
+
+.modal-dialog {
+  position: sticky;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.modal-content {
+  margin-top: 200px;
+  height: 395px;
+  border-radius: 24px;
+  border: transparent;
+}
+.modal-content .head-form i {
+  position: absolute;
+  top: 10px;
+  right: 11px;
+  font-size: 35px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.modal-content .head-form i:hover {
+  opacity: 0.7;
+}
+.modal-content header {
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+.modal-content h2 {
+  padding: 10px 0;
+  font-size: 35px;
+  font-weight: 600;
+  position: relative;
+  left: 50%;
+  transform: translateX(-10%);
+  color: #ffffff;
+}
+.modal-content .login {
+  margin-top: 40px;
+}
+.modal-content #user,
+.modal-content #password {
+  display: block;
+  width: 50px;
+  border-radius: 5px;
+}
+.modal-content #user:focus,
+.modal-content #password:focus {
+  background-color: none;
+  border: 1px solid #6181f3;
+  outline: 0;
+  box-shadow: none;
+  box-shadow: 0 3px 2px rgba(188, 188, 197, 0.5);
+  transition: 0.5s;
+}
+.modal-content #user:focus + label,
+.modal-content #password:focus + label {
+  top: -50%;
+  transform: translate3d(0, 50%, 0) scale(0.9);
+  transition: 0.2s;
+  transform-origin: left;
+}
+.modal-content #user:focus + label .inputLogin,
+.modal-content #password:focus + label .inputLogin {
+  top: 10px;
+  padding: 0 5px;
+  margin: 0 5px;
+  transition: 0.2s;
+}
+.modal-content input.active + label {
+  top: -50%;
+  transform: translate3d(0, 50%, 0) scale(0.9);
+}
+.modal-content input.active + label .inputLogin {
+  top: 10px;
+  padding: 0 5px;
+  margin: 0 5px;
+  transition: 0.2s;
+}
+.modal-content label {
+  position: absolute;
+  cursor: text;
+  z-index: 25;
+  top: 0;
+  transform: translate3d(0, 50%, 0);
+  transition: 0.2s;
+}
+.modal-content .input-group {
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+.modal-content .inputLogin {
+  position: absolute;
+  top: 7px;
+  left: 13px;
+  font-size: 14px;
+  transition: 0.2s;
+  background-color: #ffffff;
+}
+.modal-content .signInSignUp {
+  display: flex;
+  padding: 0 55px;
+  justify-content: space-between;
+}
+.modal-content .signInSignUp .signIn {
+  padding: 5px 30px;
+  background-color: #ff424e;
+  border: 1px solid #e74c3c;
+  border-radius: 24px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+.modal-content .signInSignUp .signIn:hover {
+  opacity: 0.8;
+  box-shadow: #989898 0px 0px 3px;
+}
+.modal-content .signInSignUp .signUp {
+  font-size: 14px;
+  color: #6181f3;
+  transition: all 0.5s;
+  border: none;
+  background-color: white;
+}
+.modal-content .signInSignUp .signUp:hover {
+  text-decoration: underline;
+  color: #3e20f8;
+}
+.modal-content .otherLogin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 393px;
+}
+.modal-content .otherLogin .text {
+  flex: 0 0 auto;
+  position: relative;
+  display: block;
+  margin: 15px 22px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #515151;
+  text-align: center;
+}
+.modal-content .otherLogin::after, .modal-content .otherLogin::before {
+  content: "";
+  flex: 0 1 100%;
+  display: block;
+  height: 1px;
+  background: #ebebeb;
+}
+.modal-content .socialLogin {
+  position: relative;
+}
+.modal-content .socialLogin #container {
+  position: relative;
+  margin-left: auto;
+  margin-top: 50px;
+  margin-right: auto;
+  width: 1000px;
+  height: 300px;
+}
+.modal-content .socialLogin #container p {
+  position: absolute;
+  margin: 0;
+  bottom: 0px;
+  right: 40px;
+  font-size: 60px;
+  color: #444;
+}
+.modal-content .socialLogin #logo {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -45px;
+  left: 180px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  border: 13px solid #fff;
+  background-color: #fff;
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
+  transition: all 0.5s;
+}
+.modal-content .socialLogin #logo::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 4;
+}
+.modal-content .socialLogin #logo::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 35%;
+  height: 32%;
+  background: #fff;
+  right: 0;
+  z-index: 10;
+  bottom: 50%;
+  transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+}
+.modal-content .socialLogin #logo:hover {
+  top: -55px;
+}
+.modal-content .socialLogin #logo .g-line {
+  width: 50%;
+  height: 20%;
+  background: #0091ea;
+  position: absolute;
+  right: 0;
+  margin: auto;
+  border-bottom-right-radius: 4px 20px;
+  top: 0;
+  bottom: 0;
+  z-index: 15;
+}
+.modal-content .socialLogin #logo .yellow {
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  left: -15%;
+  bottom: 32%;
+  margin: auto;
+  background: #ffc107;
+  transform: rotateZ(-48deg);
+  -webkit-transform: rotateZ(-48deg);
+  z-index: 3;
+}
+.modal-content .socialLogin #logo .green {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  border-radius: 0 0 100% 100%;
+  background: #4caf50;
+  z-index: 2;
+}
+.modal-content .socialLogin #logo .blue {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  right: 0;
+  z-index: 30;
+  top: 50%;
+  z-index: 2;
+  width: 35%;
+  height: 32%;
+  background: #0091ea;
+  right: 0;
+  z-index: 2;
+  transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+}
+.modal-content .socialLogin #logo .red {
+  width: 81%;
+  height: 50%;
+  position: absolute;
+  top: 0px;
+  background: #f44336;
+}
+.modal-content .socialLogin .fb {
+  position: absolute;
+  top: 5px;
+  left: 53%;
+  font-size: 50px;
+  transition: all 0.5s;
+}
+.modal-content .socialLogin .fb:hover {
+  top: -5px;
 }/*# sourceMappingURL=main.css.map */
