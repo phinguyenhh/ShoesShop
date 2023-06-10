@@ -1,15 +1,18 @@
 //Các code reset chung cho cả web
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html,body{
-    font-family: 'Inter', sans-serif;
+html,
+body {
+    font-family: "Inter", sans-serif;
     font-style: normal;
+    overflow: visible;
 }
 
-button:focus{
+button:focus {
     box-shadow: none !important;
-   }
+}
+

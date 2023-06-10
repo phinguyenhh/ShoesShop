@@ -1,5 +1,10 @@
 header {
     background: linear-gradient(-180deg, $color-red-4, $color-red-5);
+    position: sticky;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 100;
 
     .navbar-brand {
         @include styleText($color-white-7, $fs-8, $fw-6, $lh-1);

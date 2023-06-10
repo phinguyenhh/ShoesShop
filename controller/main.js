@@ -2,19 +2,6 @@ const getID = (id) => {
     return document.getElementById(id)
 }
 
-
-function setLocalStorage(array) {
-    localStorage.setItem("shoesDetail", JSON.stringify(array))
-}
-
-function getLocalStorage() {
-    var dataLocal = JSON.parse(localStorage.getItem("shoesDetail"))
-    if (dataLocal !== null) {
-        showDetail(dataLocal.id)
-        shoe = dataLocal
-    }
-}
-
 function quantityDetail() {
     let i = 1;
 

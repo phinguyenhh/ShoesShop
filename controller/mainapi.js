@@ -1,23 +1,46 @@
-const getShoes = () => {
+const getFeatureShoes = () => {
     axios({
         method: 'get',
         url: 'https://shop.cyberlearn.vn/api/Product',
     }).then(function (result) {
-        getLocalStorage()
-        showRelateShoes(result.data.content)
+        showFeatureShoes(result.data.content)
 
     }).catch(function (error) {
 
     });
 }
-getShoes()
 
+// getFeatureShoes()
 
-const showRelateShoes = (array) => {
+const showFeatureShoes = (array) => {
     let content = "";
     array.map((shoe, index) => {
         let strShoe = `
-        <a href="#" class="col-4" onclick="showDetail('${shoe.id}')">
+        <a href="./view/detail.html?productid=${shoe.id}" class="col-4" onclick="getDetail('${shoe.id}')">
+                    <div class="productRealate">
+                        <div class="bannerSale">-20%</div>
+                        <div class="imgRealate" style="background-image:url(${shoe.image})"></div>
+                        <h2>${shoe.name}</h2>
+                        <p>${shoe.shortDescription}</p>
+                        <div class="price">
+                            <span class="priceRealate">${shoe.price}$</span>
+                            <span class="costRealate">${shoe.price / (0.8)}$</span>
+                        </div>
+                    </div>
+        </a>
+        `
+        content += strShoe
+    })
+    getID("feature").innerHTML = content;
+}
+
+const showRelateShoes = (array) => {
+    let content = "";
+
+    array.map((shoe, index) => {
+
+        let strShoe = `
+        <a href="../../view/detail.html?productid=${shoe.id}" class="col-4" onclick="showDetail('${shoe.id}')">
                     <div class="productRealate">
                         <div class="bannerSale">-20%</div>
                         <div class="imgRealate" style="background-image:url(${shoe.image})"></div>
@@ -42,6 +65,7 @@ const showDetail = (id) => {
         url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`
     }).then(function (result) {
         const shoeDetail = result.data.content;
+        const arrayRelate = result.data.content.relatedProducts
         getID('detailShoe').innerHTML =
             `<div class="col-6 left">
           <div class="imgDetail" style="background-image:url(${shoeDetail.image})">
@@ -75,14 +99,23 @@ const showDetail = (id) => {
       </div>`
 
         quantityDetail()
-        setLocalStorage(result.data.content)
         chooseSize()
-
+        showRelateShoes(arrayRelate)
 
 
     }).catch(function (error) {
         console.log(error)
     })
 }
+
+
+// Get number ID
+window.onload = function () {
+    const urlID = new URLSearchParams(window.location.search)
+    const id = urlID.get('productid')
+    showDetail(id)
+}
+
+
 
 

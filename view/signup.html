@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes shop</title>
+
+    <!-- BS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- scss => trình duyệt web không hiểu
+    chỉ hiểu css
+    live sass => biên dịch scss => css -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+
+<body>
+
+    <header id="detail">
+        <nav class="navbar navbar-expand-lg container">
+            <div class="row container">
+                <div class="col-3">
+                    <a class="navbar-brand" href="../../index.html">Cyber's Shop <br> Shoes</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="col-6">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn search-btn"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="col-4 leftHeader">
+                    <a href="../../index.html" class="btn">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <span>Home</span>
+                    </a>
+                    <button class="btn" data-toggle="modal" data-target="#myModal">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Login</span>
+                    </button>
+                    <a class="btn">
+                        <div class="cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="cartNumber">0</div>
+                            <span>Cart</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+    <section class="signUp" id="signUp">
+        <h2 class="title">Create a Cyber ID</h2>
+        <form role="form" id="form">
+            <div class="container w-25">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" name="user" id="userSignUp" class="form-control input-sm active">
+                        <label for="userSignUp">
+                            <span class="inputLogin">User</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" name="password" id="passwordSignUp" class="form-control input-sm">
+                        <label for="passwordSignUp">
+                            <span class="inputLogin">Password</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" name="passwordConfirm" id="passwordConfirmSignUp"
+                            class="form-control input-sm">
+                        <label for="passwordConfirmSignUp">
+                            <span class="inputLogin passConfirm">Password Confirm</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" name="name" id="nameSignUp" class="form-control input-sm">
+                        <label for="nameSignUp">
+                            <span class="inputLogin">Name</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" name="phone" id="phoneSignUp" class="form-control input-sm">
+                        <label for="phoneSignUp">
+                            <span class="inputLogin">Phone</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="checkGender">
+                            <h6 class="">Gender</h6>
+                            <div class="male">
+                                <input type="radio" name="selector" value="true" id="male"><span for="male">Male</span>
+                            </div>
+                            <div class="female">
+                                <input type="radio" name="selector" value="false" id="female"><span
+                                    for="female">Female</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="register">
+                            <button>Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </section>
+
+
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <header class="head-form mb-0">
+                    <h2 id="header-title">Log In</h2>
+
+                    <i class="fa-regular fa-circle-xmark " data-dismiss="modal"></i>
+
+                </header>
+
+
+                <form role="form" id="form" class="login">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" name="user" id="user" class="form-control input-sm active">
+                            <label for="user">
+                                <span class="inputLogin">User</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" name="password" id="password" class="form-control input-sm">
+                            <label for="password">
+                                <span class="inputLogin">Password</span>
+                            </label>
+
+                        </div>
+                    </div>
+
+
+                </form>
+
+                <div class="signInSignUp">
+                    <a href="./signup.html" class="signUp">Sign Up</a>
+                    <button class="signIn">Sign In</button>
+                </div>
+                <div class="otherLogin">
+                    <span class="text">OR</span>
+                </div>
+                <div class="socialLogin">
+                    <a href="#">
+                        <div id="container">
+                            <div id="logo">
+                                <div class="g-line"></div>
+                                <span class="red"></span>
+                                <span class="yellow"></span>
+                                <span class="green"></span>
+                                <span class="blue"></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#"><i class="fa-brands fa-facebook fb"></i></a>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+
+        </div>
+    </div>
+
+    <footer></footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="../controller/mainapi.js"></script>
+    <script src="../controller/main.js"></script>
+</body>
+
+</html>
