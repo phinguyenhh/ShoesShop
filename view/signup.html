@@ -74,11 +74,12 @@
             <div class="container w-25">
                 <div class="form-group">
                     <div class="input-group">
-                        <input type="text" name="user" id="userSignUp" class="form-control input-sm active">
-                        <label for="userSignUp">
-                            <span class="inputLogin">User</span>
+                        <input type="text" name="Email" id="emailSignUp" class="form-control input-sm">
+                        <label for="EmailSignUp">
+                            <span class="inputLogin">Email</span>
                         </label>
                     </div>
+                    <span class="errorNoti" id="errorEmail"></span>
                 </div>
                 <div class="form-group">
                     <div class="input-group">
@@ -87,6 +88,8 @@
                             <span class="inputLogin">Password</span>
                         </label>
                     </div>
+                    <span class="errorNoti" id="errorPassword"></span>
+
                 </div>
                 <div class="form-group">
                     <div class="input-group">
@@ -96,6 +99,8 @@
                             <span class="inputLogin passConfirm">Password Confirm</span>
                         </label>
                     </div>
+                    <span class="errorNoti" id="errorPasswordConfirm"></span>
+
                 </div>
                 <div class="form-group">
                     <div class="input-group">
@@ -104,6 +109,8 @@
                             <span class="inputLogin">Name</span>
                         </label>
                     </div>
+                    <span class="errorNoti" id="errorName"></span>
+
                 </div>
                 <div class="form-group">
                     <div class="input-group">
@@ -112,26 +119,32 @@
                             <span class="inputLogin">Phone</span>
                         </label>
                     </div>
+                    <span class="errorNoti" id="errorPhone"></span>
+
                 </div>
                 <div class="form-group">
                     <div class="input-group">
                         <div class="checkGender">
                             <h6 class="">Gender</h6>
                             <div class="male">
-                                <input type="radio" name="selector" value="true" id="male"><span for="male">Male</span>
+                                <input type="radio" name="selector" id="male">
+                                <span for="male">Male</span>
                             </div>
                             <div class="female">
-                                <input type="radio" name="selector" value="false" id="female"><span
-                                    for="female">Female</span>
+                                <input type="radio" name="selector" id="female">
+                                <span for="female">Female</span>
                             </div>
+
                         </div>
 
                     </div>
+                    <span class="errorNoti" id="errorGender"></span>
+
                 </div>
                 <div class="form-group">
                     <div class="input-group">
-                        <div class="register">
-                            <button>Register</button>
+                        <div class="register" id="register">
+                            <button type="button">Register</button>
                         </div>
                     </div>
                 </div>
@@ -139,8 +152,6 @@
         </form>
 
     </section>
-
-
     <div class="modal fade" id="myModal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -202,7 +213,6 @@
 
         </div>
     </div>
-
     <footer></footer>
 
 
@@ -215,7 +225,10 @@
         crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    <script src="../model/InforUser.js"></script>
     <script src="../controller/mainapi.js"></script>
+    <script src="../controller/Validation.js"></script>
     <script src="../controller/main.js"></script>
 </body>
 

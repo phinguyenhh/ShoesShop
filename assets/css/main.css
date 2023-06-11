@@ -412,8 +412,13 @@ header .cart .cartNumber {
   font-weight: 800;
 }
 
-#signUp #passwordConfirmSignUp + label {
-  width: 134px;
+#signUp .errorNoti {
+  color: red;
+  margin-top: 5px;
+  margin-left: 70px;
+  display: none;
+  font-size: 14px;
+  transition: all 0.5s;
 }
 #signUp h2 {
   text-align: center;
@@ -537,7 +542,6 @@ header .cart .cartNumber {
   border-radius: 8px;
   color: white;
   font-weight: 700;
-  transition: all 0.5s;
 }
 #signUp .register button:hover {
   opacity: 0.9;

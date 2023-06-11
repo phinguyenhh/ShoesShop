@@ -1,3 +1,10 @@
+// Get number ID
+window.onload = function () {
+    const urlID = new URLSearchParams(window.location.search)
+    const id = urlID.get('productid')
+    showDetail(id)
+}
+
 const getFeatureShoes = () => {
     axios({
         method: 'get',
@@ -102,20 +109,23 @@ const showDetail = (id) => {
         chooseSize()
         showRelateShoes(arrayRelate)
 
-
     }).catch(function (error) {
-        console.log(error)
     })
 }
 
+const postSignUp = (user) => {
+    axios({
+        method: 'post',
+        url: 'https://shop.cyberlearn.vn/api/Users/signup',
+        data: user
+    }).then(function (result) {
+        alert('thang cong')
 
-// Get number ID
-window.onload = function () {
-    const urlID = new URLSearchParams(window.location.search)
-    const id = urlID.get('productid')
-    showDetail(id)
+    }).catch(function (error) {
+        const message = error.response.data.message
+        validation.checkID( "errorEmail",message)
+    });
 }
-
 
 
 
