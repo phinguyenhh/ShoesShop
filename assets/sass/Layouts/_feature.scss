@@ -1,0 +1,62 @@
+.featureShoes{
+    h2{
+        @include styleText($color-dark-1, 40px, $fw-3, 48px);
+    }
+    .category{
+        button{
+            padding: 7px 15px;
+            border: 1px solid $color-dark-1;
+            border-radius: 8px;
+            margin-right: 25px;
+            background-color: $color-white-7;
+            &:hover{
+                background-color: $color-yellow-3;
+                transition: all 0.5s;
+            }
+        }
+    }
+    .row{
+        gap: 67px;
+        flex-wrap: nowrap;
+        margin-bottom: 45px;
+    }
+    .feature__item{
+        position: relative;
+        cursor: pointer;
+
+        &:hover{
+            transform: translateY(-8px);
+            transition: all 0.5s;
+        }
+
+        background-color: $color-white-2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        h4{
+            @include styleText($color-dark-1, 24px, $fw-2, 29px);
+        }
+        span:nth-of-type(1){
+            @include styleText($color-white-6, $fs-7, $fw-2, 24px);
+        }
+        span:nth-of-type(2){
+            @include styleText($color-red-3, 40px, $fw-5, 48px);
+            margin: 20px 20px 20px 0;
+            display: inline-block;
+        }
+        span:nth-of-type(3){
+            @include styleText($color-white-6, 39px, $fw-5, 24px);
+            text-decoration: line-through;
+            display: inline-block;
+        }
+    }
+    .feature__image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    svg{
+        position: absolute;
+        top: 12px;
+        left: -5px;
+    }
+}

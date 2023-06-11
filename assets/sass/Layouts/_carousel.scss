@@ -1,0 +1,69 @@
+//Carousel
+#carouselExampleIndicators{
+width: 100%;
+height: 500px;
+}
+
+.carouselShoes{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .container-carousel{
+        z-index: 10;
+    }
+
+    .bg-carousel{
+        position: absolute;
+        z-index: 9;
+        bottom: 0;
+        left: 0;
+        margin: 0 1rem;
+
+        img{
+            width: 100%;
+        }
+    }
+    
+    .carousel-item--wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // height: 393px;
+        padding: 50px;
+    }
+    .carousel-indicators{
+        li{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+        }
+    }
+    .carousel-control-prev-icon{
+        border: 1px solid black;
+    }
+    .carousel-control-prev{
+        left: -50px;
+    }
+    .carousel-control-next{
+        right: -50px;
+    }
+    h3{
+        @include styleText($color-dark-1, 40px, $fw-2, 48px)
+    }
+    p{
+        @include styleText($color-dark-1, 20px, $fw-2, 24px)
+    }
+    .carousel-item{
+        button{
+            padding: 13px 35px;
+            background-color: $color-yellow-2;
+            border: none;
+            @include styleText($color-white-7, 20px, $fw-2, 24px);
+
+        }
+    }
+    
+}
+
