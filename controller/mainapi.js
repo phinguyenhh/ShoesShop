@@ -10,7 +10,7 @@ const getFeatureShoes = () => {
     });
 }
 
-// getFeatureShoes()
+getFeatureShoes()
 
 const showFeatureShoes = (array) => {
     let content = "";
