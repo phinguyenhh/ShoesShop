@@ -159,6 +159,10 @@ header .cart .cartNumber {
   margin-right: 25px;
   background-color: #ffffff;
 }
+.featureShoes .category button:hover {
+  background-color: #F2994A;
+  transition: all 0.5s;
+}
 .featureShoes .row {
   gap: 67px;
   flex-wrap: nowrap;
@@ -169,6 +173,10 @@ header .cart .cartNumber {
   cursor: pointer;
   background-color: #f5f5f5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.featureShoes .feature__item:hover {
+  transform: translateY(-8px);
+  transition: all 0.5s;
 }
 .featureShoes .feature__item h4 {
   color: #000000;

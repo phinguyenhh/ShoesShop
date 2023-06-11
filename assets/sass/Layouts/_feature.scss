@@ -9,6 +9,10 @@
             border-radius: 8px;
             margin-right: 25px;
             background-color: $color-white-7;
+            &:hover{
+                background-color: $color-yellow-3;
+                transition: all 0.5s;
+            }
         }
     }
     .row{
@@ -19,6 +23,11 @@
     .feature__item{
         position: relative;
         cursor: pointer;
+
+        &:hover{
+            transform: translateY(-8px);
+            transition: all 0.5s;
+        }
 
         background-color: $color-white-2;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
