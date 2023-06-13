@@ -412,6 +412,22 @@ header .cart .cartNumber {
   font-weight: 800;
 }
 
+#signUp .successRegister {
+  font-size: 30px;
+  color: #01cc65;
+  padding-top: 50px;
+  text-align: center;
+  font-weight: 500;
+}
+#signUp .error {
+  color: #da2a21;
+  border-color: #e74c3c;
+  background: #fff6f6;
+}
+#signUp .error + label span {
+  background-color: transparent;
+  color: #e74c3c;
+}
 #signUp .errorNoti {
   color: red;
   margin-top: 5px;
@@ -426,6 +442,9 @@ header .cart .cartNumber {
 }
 #signUp .form-group .input-group input {
   border-radius: 5px;
+}
+#signUp .form-group .input-group input.error:focus {
+  border-color: #e74c3c;
 }
 #signUp .form-control {
   display: block;
@@ -451,16 +470,19 @@ header .cart .cartNumber {
   padding: 0 5px;
   margin: 0 5px;
   transition: 0.2s;
+  background-color: #ffffff;
+  border-radius: 24px;
 }
 #signUp input.active + label {
   top: -50%;
   transform: translate3d(0, 50%, 0) scale(0.9);
 }
-#signUp input.active + label .inputLogin {
+#signUp input.active + label span {
   top: 10px;
   padding: 0 5px;
   margin: 0 5px;
   transition: 0.2s;
+  background-color: #fff;
 }
 #signUp label {
   position: absolute;

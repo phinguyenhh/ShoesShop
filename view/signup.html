@@ -74,9 +74,9 @@
             <div class="container w-25">
                 <div class="form-group">
                     <div class="input-group">
-                        <input type="text" name="Email" id="emailSignUp" class="form-control input-sm">
+                        <input type="text" name="Email" id="emailSignUp" class="emailSignUp form-control input-sm">
                         <label for="EmailSignUp">
-                            <span class="inputLogin">Email</span>
+                            <span class="inputLogin inputLoginError">Email</span>
                         </label>
                     </div>
                     <span class="errorNoti" id="errorEmail"></span>
@@ -147,6 +147,8 @@
                             <button type="button">Register</button>
                         </div>
                     </div>
+                    <span class="successRegister" id="successRegister" style="display: block;"></span>
+
                 </div>
             </div>
         </form>
@@ -167,7 +169,7 @@
                 <form role="form" id="form" class="login">
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="text" name="user" id="user" class="form-control input-sm active">
+                            <input type="text" name="user" id="user" class="form-control input-sm">
                             <label for="user">
                                 <span class="inputLogin">User</span>
                             </label>

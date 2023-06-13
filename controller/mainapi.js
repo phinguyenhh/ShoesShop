@@ -119,11 +119,12 @@ const postSignUp = (user) => {
         url: 'https://shop.cyberlearn.vn/api/Users/signup',
         data: user
     }).then(function (result) {
-        alert('thang cong')
-
+      getID('successRegister').innerHTML = 'Successfully Registered '
+      getID('successRegister').style.display = 'block'
+      
     }).catch(function (error) {
-        const message = error.response.data.message
-        validation.checkID( "errorEmail",message)
+        console.log(error)
+        validation.checkID( "errorEmail","<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>The email address that was used!")
     });
 }
 

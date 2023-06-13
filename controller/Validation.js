@@ -15,7 +15,7 @@ function Validation() {
         getID(spanID).style.display = "block";
     }
     this.checkEmail = function (value, spanID, message) {
-        var pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        var pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
         if (value.match(pattern)) {
 
             getID(spanID).innerHTML = "";
@@ -51,6 +51,8 @@ function Validation() {
 
            return false
         }
+        getID(spanID).innerHTML = "";
+        getID(spanID).style.display = "none";
         return true
     }   
     this.checkPhone = function (value, spanID, message) {

@@ -1,13 +1,28 @@
-#signUp { 
-    
+#signUp {
+    .successRegister {
+        font-size: 30px;
+        color: #01cc65;
+        padding-top: 50px;
+        text-align: center;
+        font-weight: 500;
+    }
+    .error {
+        color: #da2a21;
+        border-color: #e74c3c;
+        background: #fff6f6;
+        + label span {
+            background-color: transparent;
+            color: #e74c3c;
+        }
+    }
     .errorNoti {
         color: red;
         margin-top: 5px;
-        margin-left: 70px; 
+        margin-left: 70px;
         display: none;
         font-size: 14px;
         transition: all 0.5s;
-      } 
+    }
 
     h2 {
         text-align: center;
@@ -17,6 +32,11 @@
         .input-group {
             input {
                 border-radius: 5px;
+                &.error {
+                    &:focus {
+                        border-color: #e74c3c;
+                    }
+                }
             }
         }
     }
@@ -44,23 +64,24 @@
                 padding: 0 5px;
                 margin: 0 5px;
                 transition: 0.2s;
-            }   
+                background-color: #ffffff;
+                border-radius: 24px;
+            }
         }
     }
 
     input.active + label {
         top: -50%;
         transform: translate3d(0, 50%, 0) scale(0.9);
-        .inputLogin {
+        span {
             top: 10px;
             padding: 0 5px;
             margin: 0 5px;
             transition: 0.2s;
-        }
-      
-    
-    }
+            background-color: #fff;
 
+        }
+    }
 
     label {
         position: absolute;
@@ -136,9 +157,8 @@
             height: 15px;
             width: 15px;
         }
-        
     }
-  
+
     .register {
         button {
             position: absolute;
