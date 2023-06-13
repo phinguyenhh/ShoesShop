@@ -53,26 +53,26 @@ const checkValue = (id) => {
             case id = "emailSignUp":
                 isValid &= validation.checkEmpty(getValue(id), "errorEmail", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Please enter your email address.")
                     && validation.checkEmail(getValue(id), "errorEmail", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Incorrect email format.")
-             
+
                 break
             case id = "passwordSignUp":
                 isValid &= validation.checkEmpty(getValue(id), "errorPassword", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Please enter your password.")
                     && validation.checkPassword(getValue(id), "errorPassword", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Incorrect password format.<br>Your password needs to:<br> + Include both lower and upper case character.<br> + Include at least one number.<br> + Be at least 6-10 character long.")
-            
+
                 break
             case id = "passwordConfirmSignUp":
                 isValid &= validation.checkPasswordConfirm(getValue('passwordSignUp'), getValue(id), "errorPasswordConfirm", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Please check your password again.")
-          
+
                 break
             case id = "nameSignUp":
                 isValid &= validation.checkEmpty(getValue(id), "errorName", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Please enter your name.")
                     && validation.checkName(getValue(id), "errorName", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Incorrect name format.")
-   
+
                 break
             case id = "phoneSignUp":
                 isValid &= validation.checkEmpty(getValue(id), "errorPhone", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Please enter your phone.")
                     && validation.checkPhone(getValue(id), "errorPhone", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Incorrect phone format.<br> + Be at least 9-10 number long.")
-       
+
                 break
             default:
                 break;
@@ -94,10 +94,10 @@ const checkValue = (id) => {
             case id = "passwordSignUp":
                 isValid &= validation.checkEmpty(getValue(id), "errorPassword", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Please enter your password.")
                     && validation.checkPassword(getValue(id), "errorPassword", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Incorrect password format.<br>Your password needs to:<br> + Include both lower and upper case character.<br> + Include at least one number.<br> + Be at least 6-10 character long.")
-                if (getValue('passwordConfirmSignUp')== '') { 
+                if (getValue(id) == '') {
                     getID(id).classList.add('error')
-                    }
-                 else if (getValue('passwordConfirmSignUp') != getValue(id)) {
+                }
+                else if (getValue('passwordConfirmSignUp') != getValue(id)) {
                     getID("passwordConfirmSignUp").classList.add('error')
                 } else {
                     getID("passwordConfirmSignUp").classList.remove('error')
@@ -112,7 +112,7 @@ const checkValue = (id) => {
                     getID(id).classList.add('error')
                 } else {
                     getID(id).classList.remove('error')
-                }        
+                }
                 break
             case id = "nameSignUp":
                 isValid &= validation.checkEmpty(getValue(id), "errorName", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Please enter your name.")
@@ -228,7 +228,9 @@ const signUp = () => {
     if (isValid) {
         const user = new InforUser(email, password, name, gender, phone)
         postSignUp(user)
-        resetForm()
+        if (isValid) {
+            resetForm()
+        }
     } else {
         getID('emailSignUp').classList.add('error')
         getID('passwordSignUp').classList.add('error')
@@ -240,7 +242,6 @@ const signUp = () => {
 
 getID('register').addEventListener('click', () => {
     signUp()
-    resetForm()
 })
 
 const checkGender = (radio1, radio2) => {
