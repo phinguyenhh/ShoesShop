@@ -144,6 +144,14 @@ checkValue('passwordConfirmSignUp')
 checkValue('nameSignUp')
 checkValue('phoneSignUp')
 
+const inputGenders = document.querySelectorAll('.checkGender input')
+inputGenders.forEach((inputGender) => {
+    inputGender.addEventListener('click', () => {
+        getID('errorGender').style.display = " none"
+        getID('successRegister').style.display = "none"
+    })
+})
+
 function quantityDetail() {
     let i = 1;
 
@@ -209,7 +217,7 @@ const signUp = () => {
     const genderM = getID('male')
     const genderF = getID('female')
 
-    const gender = checkGender(genderM, genderF)
+    const gender = checkGender(genderM,genderF)
     let isValid = true
 
     isValid &= validation.checkEmpty(email, "errorEmail", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Please enter your email address.")
@@ -223,7 +231,6 @@ const signUp = () => {
         && validation.checkPhone(phone, "errorPhone", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Incorrect phone format.<br> + Be at least 9-10 number long.")
     isValid &= validation.checkEmpty(gender, "errorGender", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Please choose your gender.")
 
-    isValid &= validation.checkEmpty(gender, "errorGender", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Please choose your gender.")
 
     if (isValid) {
         const user = new InforUser(email, password, name, gender, phone)
@@ -244,15 +251,14 @@ getID('register').addEventListener('click', () => {
     signUp()
 })
 
-const checkGender = (radio1, radio2) => {
-    if (radio1.checked) {
+const checkGender = (a,b) => {
+    if (a.checked) {
         return true
     }
-    else if (radio2.checked) {
+    else if (b.checked) {
         return false
     }
     else {
         return gender = '';
     }
-
 }

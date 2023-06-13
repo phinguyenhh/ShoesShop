@@ -169,14 +169,15 @@ header .cart .cartNumber {
 .featureShoes .category button {
   padding: 7px 15px;
   font-weight: 600;
-  border: 1px solid #000000;
-  border-radius: 8px;
-  margin-right: 25px;
+  border: 1px solid #1e1d1d;
+  border-radius: 24px;
+  margin-right: 10px;
   background-color: #ffffff;
   transition: all 0.5s;
+  min-width: 100px;
 }
 .featureShoes .category button:hover {
-  background-color: #EA384D;
+  background-color: red;
   opacity: 0.8;
   color: white;
 }
@@ -336,6 +337,7 @@ header .cart .cartNumber {
   text-align: center;
 }
 .relateShoes .productRealate {
+  position: relative;
   background-color: #f8f8f8;
   width: 335px;
   height: 370px;
@@ -346,6 +348,7 @@ header .cart .cartNumber {
 }
 .relateShoes .productRealate:hover {
   box-shadow: #989898 0px 0px 20px;
+  transform: translateY(-10px);
 }
 .relateShoes .imgRealate {
   background-position: center center;
@@ -402,7 +405,7 @@ header .cart .cartNumber {
 }
 .relateShoes .bannerSale {
   position: absolute;
-  left: 11px;
+  left: -4px;
   top: 10px;
   background-image: url(../img/badge-on-sale.svg);
   background-repeat: no-repeat;
