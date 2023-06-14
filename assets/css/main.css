@@ -162,11 +162,23 @@ header .cart .cartNumber {
 
 .featureShoes h2 {
   color: #000000;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 400;
   line-height: 48px;
 }
-.featureShoes .category button {
+.featureShoes .categoryText {
+  padding-left: 13px;
+  font-size: 20px;
+  padding-top: 15px;
+}
+.featureShoes .category {
+  display: flex;
+}
+.featureShoes .category a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #1e1d1d;
   padding: 7px 15px;
   font-weight: 600;
   border: 1px solid #1e1d1d;
@@ -175,8 +187,9 @@ header .cart .cartNumber {
   background-color: #ffffff;
   transition: all 0.5s;
   min-width: 100px;
+  cursor: pointer;
 }
-.featureShoes .category button:hover {
+.featureShoes .category a:hover {
   background-color: red;
   opacity: 0.8;
   color: white;
@@ -377,7 +390,7 @@ header .cart .cartNumber {
 .relateShoes p {
   text-align: left;
   color: #cbc9c9;
-  font-size: 20px;
+  font-size: 18px;
   padding-left: 25px;
   margin-bottom: 0;
   display: -webkit-box;

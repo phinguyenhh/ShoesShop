@@ -1,9 +1,3 @@
-// Get number ID
-window.onload = function () {
-    const urlID = new URLSearchParams(window.location.search)
-    const id = urlID.get('productid')
-    showDetail(id)
-}
 
 const getFeatureShoes = () => {
     axios({
@@ -11,7 +5,6 @@ const getFeatureShoes = () => {
         url: 'https://shop.cyberlearn.vn/api/Product',
     }).then(function (result) {
         showFeatureShoes(result.data.content)
-
     }).catch(function (error) {
 
     });
@@ -23,7 +16,7 @@ const showFeatureShoes = (array) => {
     let content = "";
     array.map((shoe, index) => {
         let strShoe = `
-        <a href="./view/detail.html?productid=${shoe.id}" class="col-4" onclick="getDetail('${shoe.id}')">
+        <a href="../view/detail.html?productid=${shoe.id}" class="col-4" onclick="getDetail('${shoe.id}')">
                     <div class="productRealate">
                         <div class="bannerSale">-20%</div>
                         <div class="imgRealate" style="background-image:url(${shoe.image})"></div>
@@ -128,5 +121,18 @@ const postSignUp = (user) => {
     });
 }
 
+const getCategory= (idCategory) => {
+    axios({
+        method: 'get',
+        url: `https://shop.cyberlearn.vn/api/Product/getProductByCategory?categoryId=${idCategory}`,
+    }).then(function (result) {
+    const arrayCategory = result.data.content
+    showFeatureShoes(arrayCategory)
+    checkCategory()
+    getID('categoryText').innerHTML = idCategory.replace('_',' ').toUpperCase()
+    }).catch(function (error) {
+    getID('categoryText').innerHTML = idCategory.toUpperCase()
 
+    });
+}
 

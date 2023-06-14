@@ -1,10 +1,19 @@
 .featureShoes{
    
         h2{
-            @include styleText($color-dark-1, 40px, $fw-3, 48px);
+            @include styleText($color-dark-1, 30px, $fw-3, 48px);
+        }
+        .categoryText {
+            padding-left: 13px;
+            font-size: 20px;
+            padding-top: 15px;
         }
         .category{
-            button{
+            display: flex;
+            a{ display: block;
+                text-align: center;
+                text-decoration: none;
+                color: $color-dark-2;
                 padding: 7px 15px;
                 font-weight: 600;
                 border: 1px solid $color-dark-2;
@@ -13,6 +22,7 @@
                 background-color: $color-white-7;
                 transition: all 0.5s;
                 min-width: 100px;
+                cursor: pointer;
                 &:hover{
                     background-color: red;                    
                     opacity: 0.8;

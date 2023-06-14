@@ -22,7 +22,7 @@
   <!-- scss => trình duyệt web không hiểu
     chỉ hiểu css
     live sass => biên dịch scss => css -->
-  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
 
 </head>
 
@@ -70,136 +70,25 @@
 
     </nav>
   </header>
+ 
 
-  <section class="carouselShoes container ">
-    <div id="carouselExampleIndicators" class="carousel container-carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active ">
-          <div class="row carousel-item--wrapper">
-            <div class="col-8">
-              <img src="./assets/img/shoes1.png" class="d-block w-100" alt="...">
-            </div>
-
-            <div class="col-4">
-              <h3>Product name</h3>
-              <p>Product description ...</p>
-              <button>Buy now</button>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="carousel-item ">
-          <div class="row carousel-item--wrapper">
-            <div class="col-8">
-              <img src="./assets/img/shoes1.png" class="d-block w-100" alt="...">
-            </div>
-
-            <div class="col-4">
-              <h3>Product name</h3>
-              <p>Product description ...</p>
-              <button>Buy now</button>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="carousel-item ">
-          <div class="row carousel-item--wrapper">
-            <div class="col-8">
-              <img src="./assets/img/shoes1.png" class="d-block w-100" alt="...">
-            </div>
-
-            <div class="col-4">
-              <h3>Product name</h3>
-              <p>Product description ...</p>
-              <button>Buy now</button>
-            </div>
-          </div>
-
-        </div>
-
-
-
-      </div>
-
-      <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
-        <svg width="43" height="66" viewBox="0 0 43 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g filter="url(#filter0_d_4_39)">
-            <path d="M37.7817 56.6282L4.77997 29.0635L37.7817 1.49876L37.7817 56.6282Z" stroke="black"
-              stroke-opacity="0.24" shape-rendering="crispEdges" />
-          </g>
-          <defs>
-            <filter id="filter0_d_4_39" x="0" y="0.429688" width="42.2817" height="65.2677" filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB">
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
-              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                result="hardAlpha" />
-              <feOffset dy="4" />
-              <feGaussianBlur stdDeviation="2" />
-              <feComposite in2="hardAlpha" operator="out" />
-              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4_39" />
-              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4_39" result="shape" />
-            </filter>
-          </defs>
-        </svg>
-
-      </button>
-      <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
-        <svg width="44" height="66" viewBox="0 0 44 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g filter="url(#filter0_d_4_38)">
-            <path d="M5.36309 1.49876L38.3648 29.0635L5.36309 56.6283L5.36309 1.49876Z" stroke="black"
-              stroke-opacity="0.24" shape-rendering="crispEdges" />
-          </g>
-          <defs>
-            <filter id="filter0_d_4_38" x="0.863037" y="0.429657" width="42.2817" height="65.2677"
-              filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
-              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                result="hardAlpha" />
-              <feOffset dy="4" />
-              <feGaussianBlur stdDeviation="2" />
-              <feComposite in2="hardAlpha" operator="out" />
-              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4_38" />
-              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4_38" result="shape" />
-            </filter>
-          </defs>
-        </svg>
-
-
-      </button>
-
-    </div>
-
-    <div class="bg-carousel">
-      <img src="./assets/img/carousel.png" alt="">
-    </div>
-
-  </section>
-
-  <section class="featureShoes">
+  <section class="featureShoes" id="featureShoes">
     <div class="container">
       <div class="feature__head">
-        <h2 class="pt-5">Category</h2>
+        <h2 class="pt-2">Category</h2>
         <div class="category pt-3">
-          <a href="./view/category.html">All</a>
-          <a href="./view/category.html?featureShoesID=women">Women</a>
-          <a href="./view/category.html?featureShoesID=men">Men</a>
-          <a href="./view/category.html?featureShoesID=adidas">Adidas</a>
-          <a href="./view/category.html?featureShoesID=nike">Nike</a>
-          <a href="./view/category.html?featureShoesID=VANS_CONVERSE">Vans</a>
+          <a href="./category.html?featureShoesID=all">All</a>
+          <a href="./category.html?featureShoesID=women" class="btnCategory">Women</a>
+          <a href="./category.html?featureShoesID=men" class="btnCategory">Men</a>
+          <a href="./category.html?featureShoesID=adidas" class="btnCategory">Adidas</a>
+          <a href="./category.html?featureShoesID=nike" class="btnCategory">Nike</a>
+          <a href="./category.html?featureShoesID=VANS_CONVERSE" class="btnCategory">Vans</a>
         </div>
+        <div class="categoryText" id="categoryText"></div>
       </div>
-      <div class="feature__body py-5 relateShoes">
-        <div class="row container" id="feature">
 
+      <div class="feature__body py-3 relateShoes">
+        <div class="row container" id="feature">
 
 
         </div>
@@ -278,6 +167,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   <script src="../controller/mainapi.js"></script>
+  <script src="../controller/category.js"></script>
   <script src="../controller/main.js"></script>
 </body>
 
