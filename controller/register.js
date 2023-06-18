@@ -1,5 +1,4 @@
-const inforUser = new InforUser();
-const validation = new Validation();
+
 const checkValue = (id) => {
 
     getID(id).addEventListener('keyup', () => {
@@ -87,11 +86,14 @@ const checkValue = (id) => {
                     getID(id).classList.add('error')
                 }
                 else if (getValue('passwordConfirmSignUp') != getValue(id)) {
+                    isValid &= validation.checkPassword(getValue(id), "errorPassword", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Incorrect password format.<br>Your password needs to:<br> + Include both lower and upper case character.<br> + Include at least one number.<br> + Be at least 6-10 character long.")
+                    if (!isValid) {
+                        getID(id).classList.add('error')
+                    }
                     getID("passwordConfirmSignUp").classList.add('error')
                 } else {
+                    getID(id).classList.remove('error')
                     getID("passwordConfirmSignUp").classList.remove('error')
-                    isValid &= validation.checkPasswordConfirm(getValue('passwordSignUp'), getValue(id), "errorPasswordConfirm", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Please check your password again.")
-
                 }
 
                 break
@@ -142,7 +144,7 @@ const signUp = () => {
     const genderM = getID('male')
     const genderF = getID('female')
 
-    const gender = checkGender(genderM,genderF)
+    const gender = checkGender(genderM, genderF)
     let isValid = true
 
     isValid &= validation.checkEmpty(email, "errorEmail", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Please enter your email address.")
@@ -163,16 +165,18 @@ const signUp = () => {
         if (isValid) {
             resetForm()
         }
-    } else {
-        getID('emailSignUp').classList.add('error')
-        getID('passwordSignUp').classList.add('error')
-        getID('nameSignUp').classList.add('error')
-        getID('phoneSignUp').classList.add('error')
     }
-
+    else {
+        if (email == '' && password == '' && name == '' && phone == '') {
+            getID('emailSignUp').classList.add('error')
+            getID('passwordSignUp').classList.add('error')
+            getID('nameSignUp').classList.add('error')
+            getID('phoneSignUp').classList.add('error')
+        }
+    }
 }
 
-const checkGender = (a,b) => {
+const checkGender = (a, b) => {
     if (a.checked) {
         return true
     }
@@ -190,7 +194,6 @@ inputGenders.forEach((inputGender) => {
         getID('successRegister').style.display = "none"
     })
 })
-
 
 getID('register').addEventListener('click', () => {
     signUp()

@@ -29,45 +29,62 @@
 
 <body>
 
-    <header id="detail">
+    <header id="header">
         <nav class="navbar navbar-expand-lg container">
-            <div class="row container">
-                <div class="col-3">
-                    <a class="navbar-brand" href="../../index.html">Cyber's Shop <br> Shoes</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <div class="col-6">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn search-btn"><i class="fa fa-search"></i></button>
-                    </form>
-                </div>
-                <div class="col-4 leftHeader">
-                    <a href="../../index.html" class="btn">
-                        <i class="fa-solid fa-house-chimney"></i>
-                        <span>Home</span>
-                    </a>
-                    <button class="btn" data-toggle="modal" data-target="#myModal">
-                        <i class="fa-solid fa-user"></i>
-                        <span>Login</span>
-                    </button>
-                    <a class="btn">
-                        <div class="cart">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <div class="cartNumber">0</div>
-                            <span>Cart</span>
-                        </div>
-                    </a>
-                </div>
+          <div class="row container">
+            <div class="col-3">
+              <a class="navbar-brand" href="../../index.html">Cyber's Shop <br> Shoes</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
             </div>
+            <div class="col-6">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+              <form class="form-inline my-2 my-lg-0">
+                <input id="inputSearch" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
+                <div id="aBTN">
+                  <a id="btnSearch" type="button" class="btn search-btn"><i class="fa fa-search"></i></a>
+                </div>
+              </form>
             </div>
+            <div class="col-6 leftHeader d-flex">
+              <a href="../../index.html" class="btn">
+                <i class="fa-solid fa-house-chimney"></i>
+                <span>Home</span>
+              </a>
+              <button id="btnLogin" class="btn search-btn boxMenu" data-toggle="modal" data-target="#myModal">
+                <div class="d-flex leftHeaderLogin ">
+                  <!-- checked -->
+                  <div id="LoginContent" class="LoginContent d-flex ">
+                    <i class="fa-solid fa-user"></i>
+                    <span id="userLogin">Login</span>
+                    <ul class="userMenu">
+                      <li class="userMenuItem">
+                        <a id="inforMenu" class="inforMenu" href="">
+                          Log out
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </button>
+              <button class="btn search-btn">
+                <div class="cart">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <div class="cartNumber">0</div>
+                  <span>Cart</span>
+                </div>
+              </button>
+    
+            </div>
+          </div>
+          </div>
+    
+    
+    
         </nav>
-    </header>
+      </header>
     <section class="signUp" id="signUp">
         <h2 class="title">Create a Cyber ID</h2>
         <form role="form" id="form">
@@ -156,65 +173,67 @@
     </section>
     <div class="modal fade" id="myModal">
         <div class="modal-dialog">
-            <div class="modal-content">
-
-                <header class="head-form mb-0">
-                    <h2 id="header-title">Log In</h2>
-
-                    <i class="fa-regular fa-circle-xmark " data-dismiss="modal"></i>
-
-                </header>
-
-
-                <form role="form" id="form" class="login">
-                    <div class="form-group">
-                        <div class="input-group">
-                            <input type="text" name="user" id="user" class="form-control input-sm">
-                            <label for="user">
-                                <span class="inputLogin">User</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <input type="text" name="password" id="password" class="form-control input-sm">
-                            <label for="password">
-                                <span class="inputLogin">Password</span>
-                            </label>
-
-                        </div>
-                    </div>
-
-
-                </form>
-
-                <div class="signInSignUp">
-                    <a href="./signup.html" class="signUp">Sign Up</a>
-                    <button class="signIn">Sign In</button>
+          <div class="modal-content">
+    
+            <header class="head-form mb-0">
+              <h2 id="header-title">Log In</h2>
+    
+              <i id="closeModal" class="fa-regular fa-circle-xmark " data-dismiss="modal"></i>
+    
+            </header>
+    
+     
+            <form role="form" id="form" class="login signUp">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" name="user" id="user" class="form-control input-sm">
+                  <label for="user">
+                    <span class="inputLogin">User</span>
+                  </label>
                 </div>
-                <div class="otherLogin">
-                    <span class="text">OR</span>
+                <span class="errorNoti" id="errorEmailLogin"></span>
+    
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" name="password" id="password" class="form-control input-sm">
+                  <label for="password">
+                    <span class="inputLogin">Password</span>
+                  </label>
                 </div>
-                <div class="socialLogin">
-                    <a href="#">
-                        <div id="container">
-                            <div id="logo">
-                                <div class="g-line"></div>
-                                <span class="red"></span>
-                                <span class="yellow"></span>
-                                <span class="green"></span>
-                                <span class="blue"></span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#"><i class="fa-brands fa-facebook fb"></i></a>
-                </div>
+              </div>
+              <span class="errorLogin" id="errorLogin"></span>
+    
+    
+            </form>
+    
+            <div class="signInSignUp">
+              <a href="../view/signup.html" class="signUp">Sign Up</a>
+              <button class="signIn" id="signIn">Sign In</button>
             </div>
-
-            <!-- Modal footer -->
-
+            <div class="otherLogin">
+              <span class="text">OR</span>
+            </div>
+            <div class="socialLogin">
+              <a href="#">
+                <div id="container">
+                  <div id="logo">
+                    <div class="g-line"></div>
+                    <span class="red"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+                    <span class="blue"></span>
+                  </div>
+                </div>
+              </a>
+              <a href="#"><i class="fa-brands fa-facebook fb"></i></a>
+            </div>
+          </div>
+    
+          <!-- Modal footer -->
+    
         </div>
-    </div>
+      </div>
     <footer></footer>
 
 
@@ -232,7 +251,9 @@
     <script src="../controller/mainapi.js"></script>
     <script src="../controller/Validation.js"></script>
     <script src="../controller/main.js"></script>
+    <script src="../controller/login.js"></script>
     <script src="../controller/register.js"></script>
+
 </body>
 
 </html>

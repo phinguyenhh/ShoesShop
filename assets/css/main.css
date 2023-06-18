@@ -48,8 +48,9 @@ header .form-inline .btn {
   position: absolute;
   outline: 0;
   right: 26px;
+  top: 3px;
   color: #ffffff;
-  padding: 4px 24px 3px 24px;
+  padding: 3px 24px 3px 24px;
   border-top-right-radius: 24px;
   border-bottom-right-radius: 24px;
   background: linear-gradient(-180deg, #D31027, #EA384D);
@@ -60,6 +61,62 @@ header .form-inline .btn:hover {
 }
 header .form-inline .btn:focus-visible {
   outline: 0;
+}
+header .leftHeader #userLogin {
+  width: 50px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+header .leftHeader .boxMenu {
+  position: relative;
+  width: 90px;
+}
+header .leftHeader .boxMenu:hover .checked .userMenu {
+  display: block;
+}
+header .leftHeader .boxMenu .userMenu {
+  display: none;
+}
+header .leftHeader .boxMenu .checked .userMenu {
+  position: absolute;
+  padding-left: 0;
+  top: calc(100% + 4px);
+  right: 0;
+  width: 160px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  z-index: 2;
+  list-style: none;
+  box-shadow: 0 1px 2px #e0e0e0;
+  display: none;
+  list-style: none;
+}
+header .leftHeader .boxMenu .checked .userMenu:before {
+  content: "";
+  border-width: 20px 27px;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent;
+  position: absolute;
+  right: 4px;
+  top: -29px;
+}
+header .leftHeader .boxMenu .checked .userMenu .userMenuItem {
+  padding-top: 2px;
+}
+header .leftHeader .boxMenu .checked .userMenu .userMenuItem:hover .inforMenu {
+  background-color: rgb(250, 250, 250);
+  text-decoration: underline;
+}
+header .leftHeader .boxMenu .checked .userMenu .userMenuItem .inforMenu {
+  position: relative;
+  color: #1e1d1d;
+  font-weight: 300;
+  font-size: 16px;
+  padding: 8px 16px;
+  display: block;
 }
 header .leftHeader i {
   color: #ffffff;
@@ -428,23 +485,23 @@ header .cart .cartNumber {
   font-weight: 800;
 }
 
-#signUp .successRegister {
+.signUp .successRegister {
   font-size: 30px;
   color: #01cc65;
   padding-top: 50px;
   text-align: center;
   font-weight: 500;
 }
-#signUp .error {
+.signUp .error {
   color: #da2a21;
   border-color: #e74c3c;
   background: #fff6f6;
 }
-#signUp .error + label span {
+.signUp .error + label span {
   background-color: transparent;
   color: #e74c3c;
 }
-#signUp .errorNoti {
+.signUp .errorNoti {
   color: red;
   margin-top: 5px;
   margin-left: 70px;
@@ -452,22 +509,22 @@ header .cart .cartNumber {
   font-size: 14px;
   transition: all 0.5s;
 }
-#signUp h2 {
+.signUp h2 {
   text-align: center;
   padding: 50px 0 25px 0;
 }
-#signUp .form-group .input-group input {
+.signUp .form-group .input-group input {
   border-radius: 5px;
 }
-#signUp .form-group .input-group input.error:focus {
+.signUp .form-group .input-group input.error:focus {
   border-color: #e74c3c;
 }
-#signUp .form-control {
+.signUp .form-control {
   display: block;
   width: 50px;
   border-radius: 5px;
 }
-#signUp .form-control:focus {
+.signUp .form-control:focus {
   background-color: none;
   border: 1px solid #6181f3;
   outline: 0;
@@ -475,13 +532,13 @@ header .cart .cartNumber {
   box-shadow: 0 3px 2px rgba(188, 188, 197, 0.5);
   transition: 0.5s;
 }
-#signUp .form-control:focus + label {
+.signUp .form-control:focus + label {
   top: -50%;
   transform: translate3d(0, 50%, 0) scale(0.9);
   transition: 0.2s;
   transform-origin: left;
 }
-#signUp .form-control:focus + label .inputLogin {
+.signUp .form-control:focus + label .inputLogin {
   top: 10px;
   padding: 0 5px;
   margin: 0 5px;
@@ -489,18 +546,18 @@ header .cart .cartNumber {
   background-color: #ffffff;
   border-radius: 24px;
 }
-#signUp input.active + label {
+.signUp input.active + label {
   top: -50%;
   transform: translate3d(0, 50%, 0) scale(0.9);
 }
-#signUp input.active + label span {
+.signUp input.active + label span {
   top: 10px;
   padding: 0 5px;
   margin: 0 5px;
   transition: 0.2s;
   background-color: #fff;
 }
-#signUp label {
+.signUp label {
   position: absolute;
   cursor: text;
   z-index: 25;
@@ -508,13 +565,13 @@ header .cart .cartNumber {
   transform: translate3d(0, 50%, 0);
   transition: 0.2s;
 }
-#signUp .input-group {
+.signUp .input-group {
   width: 80%;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 5px;
 }
-#signUp .inputLogin {
+.signUp .inputLogin {
   position: absolute;
   top: 7px;
   left: 13px;
@@ -522,15 +579,15 @@ header .cart .cartNumber {
   transition: 0.2s;
   background-color: #ffffff;
 }
-#signUp .passConfirm {
+.signUp .passConfirm {
   width: 134px;
 }
-#signUp .signInSignUp {
+.signUp .signInSignUp {
   display: flex;
   padding: 0 55px;
   justify-content: space-between;
 }
-#signUp .signInSignUp .signIn {
+.signUp .signInSignUp .signIn {
   padding: 5px 30px;
   background-color: #ff424e;
   border: 1px solid #e74c3c;
@@ -540,38 +597,38 @@ header .cart .cartNumber {
   font-weight: 500;
   transition: all 0.5s;
 }
-#signUp .signInSignUp .signIn:hover {
+.signUp .signInSignUp .signIn:hover {
   opacity: 0.8;
 }
-#signUp .signInSignUp .signUp {
+.signUp .signInSignUp .signUp {
   font-size: 14px;
   color: #6181f3;
   transition: all 0.5s;
   border: none;
   background-color: white;
 }
-#signUp .signInSignUp .signUp:hover {
+.signUp .signInSignUp .signUp:hover {
   text-decoration: underline;
   color: #3e20f8;
 }
-#signUp .checkGender {
+.signUp .checkGender {
   display: flex;
   justify-content: space-between;
   margin: 0 10px;
 }
-#signUp .checkGender h6 {
+.signUp .checkGender h6 {
   font-weight: 400;
 }
-#signUp .checkGender .male {
+.signUp .checkGender .male {
   margin-right: 35px;
   margin-left: 35px;
 }
-#signUp .checkGender input[type=radio] {
+.signUp .checkGender input[type=radio] {
   margin-right: 5px;
   height: 15px;
   width: 15px;
 }
-#signUp .register button {
+.signUp .register button {
   position: absolute;
   width: 100%;
   border: none;
@@ -581,7 +638,7 @@ header .cart .cartNumber {
   color: white;
   font-weight: 700;
 }
-#signUp .register button:hover {
+.signUp .register button:hover {
   opacity: 0.9;
   box-shadow: #989898 0px 0px 3px;
 }
@@ -874,4 +931,9 @@ header .cart .cartNumber {
 }
 .modal-content .socialLogin .fb:hover {
   top: -5px;
+}
+
+.searchPage h2 {
+  font-size: 20px;
+  font-weight: 400;
 }/*# sourceMappingURL=main.css.map */

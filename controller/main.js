@@ -1,5 +1,6 @@
 const inputGenders = document.querySelectorAll('.checkGender input')
 const inputs = document.querySelectorAll('input.input-sm')
+const validation = new Validation();
 
 const getID = (id) => {
     return document.getElementById(id)
@@ -31,18 +32,26 @@ function resetForm() {
     });
 }
 
-const checkCategory = () => {
-    const btnCategories = document.querySelectorAll('.btnCategory')
-    btnCategories.forEach((btnCategory) => {
+getID('inputSearch').addEventListener('keyup', () => {
+    const inputSearch = getValue('inputSearch')
+    getID('aBTN').innerHTML = `<a href="../view/search.html?keyword=${inputSearch}" id="btnSearch" type="button" class="btn search-btn"><i class="fa fa-search"></i></a>`
+})
 
-        btnCategory.addEventListener("click", () => {
-            btnCategories.forEach((btnCategory) => {
-                btnCategory.classList.remove('active')
+window.addEventListener('load', ()=> {
+    var loggedUser = JSON.parse(localStorage.getItem('userLogin'))
+    if(loggedUser) {
+        getID('userLogin').innerHTML = loggedUser.email
+        getID('LoginContent').classList.add('checked')
+        getID('btnLogin').disabled = true        
+        getID('btnLogin').style.opacity = "1"   
+        getID('btnLogin').style.cursor = "pointer"   
+    }
+})
 
-             })
-             btnCategory.getAttribute('href')
-            btnCategory.classList.add('active')
-        })
+getID('inforMenu').addEventListener('click',()=> {
+    localStorage.removeItem("userLogin");
+    getID('LoginContent').classList.remove('checked')
+})
 
-    })
-}
+
+

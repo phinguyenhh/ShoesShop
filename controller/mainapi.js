@@ -112,27 +112,79 @@ const postSignUp = (user) => {
         url: 'https://shop.cyberlearn.vn/api/Users/signup',
         data: user
     }).then(function (result) {
-      getID('successRegister').innerHTML = 'Successfully Registered '
-      getID('successRegister').style.display = 'block'
-      
+        getID('successRegister').innerHTML = 'Successfully Registered '
+        getID('successRegister').style.display = 'block'
+
     }).catch(function (error) {
         console.log(error)
-        validation.checkID( "errorEmail","<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>The email address that was used!")
+        validation.checkID("errorEmail", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>The email address that was used!")
     });
 }
 
-const getCategory= (idCategory) => {
+const getCategory = (idCategory) => {
     axios({
         method: 'get',
         url: `https://shop.cyberlearn.vn/api/Product/getProductByCategory?categoryId=${idCategory}`,
     }).then(function (result) {
-    const arrayCategory = result.data.content
-    showFeatureShoes(arrayCategory)
-    checkCategory()
-    getID('categoryText').innerHTML = idCategory.replace('_',' ').toUpperCase()
+        const arrayCategory = result.data.content
+        getID('categoryText').innerHTML = idCategory.replace('_', ' ').toUpperCase()
+        showFeatureShoes(arrayCategory)
     }).catch(function (error) {
-    getID('categoryText').innerHTML = idCategory.toUpperCase()
+        getID('categoryText').innerHTML = idCategory.toUpperCase()
 
     });
 }
 
+const getProductSearch = (keyword) => {
+    axios({
+        method: 'get',
+        url: `https://shop.cyberlearn.vn/api/Product?keyword=${keyword}`,
+    }).then(function (result) {
+        showProductSearch(result.data.content)
+
+        getID("resultSearch").innerHTML = "Result search: " + keyword;
+    }).catch(function (error) {
+    });
+}
+
+const showProductSearch = (array) => {
+    let content = "";
+    array.map((shoe, index) => {
+        let strShoe = `
+        <a href="../view/detail.html?productid=${shoe.id}" class="col-4" onclick="getDetail('${shoe.id}')">
+        <div class="productRealate">
+        <div class="bannerSale">-20%</div>
+        <div class="imgRealate" style="background-image:url(${shoe.image})"></div>
+        <h2>${shoe.name}</h2>
+        <p>${shoe.shortDescription}</p>
+        <div class="price">
+        <span class="priceRealate">${shoe.price}$</span>
+        <span class="costRealate">${shoe.price / (0.8)}$</span>
+        </div>
+        </div>
+        </a>
+        `
+        content += strShoe
+    })
+    getID("featureSearch").innerHTML = content;
+}
+
+const checkLogin = (user,password) => {
+    axios({
+        method: 'post',
+        url: 'https://shop.cyberlearn.vn/api/Users/signin',
+        data: {
+            email: user,
+            password: password
+        }
+    }).then(function (result) {
+        const userLogin = result.data.content
+        localStorage.setItem('userLogin',JSON.stringify(userLogin))
+        getID('userLogin').innerHTML = userLogin.email
+        getID('LoginContent').classList.add('checked')
+      
+    }).catch(function (error) {
+        alert("Please check your email address and password.")
+        location.reload()
+    });
+}
