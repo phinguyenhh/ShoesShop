@@ -33,7 +33,6 @@ getID('signIn').addEventListener('click', () => {
     isValid = true;
     isValid &= validation.checkEmpty(user, "errorEmailLogin", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Please enter your email address.")
         && validation.checkEmail(user, "errorEmailLogin", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Incorrect email format.")
-    isValid &= validation.checkEmpty(password, "errorPasswordLogin", "<i class='fa-solid fa-circle-exclamation pr-1' style='red'></i>Please enter your password.")
 
     if (isValid) {
         checkLogin(user, password)
