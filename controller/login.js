@@ -41,7 +41,6 @@ getID('signIn').addEventListener('click', () => {
         getID('btnLogin').style.opacity = "1"
         getID('btnLogin').style.opacity = "1"
         getID('btnLogin').style.cursor = "pointer"
-
     } else {
         if (getID('user').value == '') {
             getID('user').classList.add('error')

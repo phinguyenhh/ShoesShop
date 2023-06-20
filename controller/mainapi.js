@@ -182,7 +182,7 @@ const checkLogin = (user,password) => {
         localStorage.setItem('userLogin',JSON.stringify(userLogin))
         getID('userLogin').innerHTML = userLogin.email
         getID('LoginContent').classList.add('checked')
-      
+        window.location.href = "/index.html"
     }).catch(function (error) {
         alert("Please check your email address and password.")
         location.reload()
