@@ -5,6 +5,7 @@ window.onload = function () {
 }
 
 
+
 function quantityDetail() {
     let i = 1;
 

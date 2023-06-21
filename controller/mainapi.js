@@ -94,13 +94,15 @@ const showDetail = (id) => {
               <button class="btn minusDetail" id="minusDetail">-</button>
           </div>
           <div class="addCartDetail">
-              <button>Add to cart</button>
+              <button class="btn btnATC" id="btnATC">Add to cart</button>
           </div>
       </div>`
 
         quantityDetail()
         chooseSize()
         showRelateShoes(arrayRelate)
+        console.log(getID("btnATC"))
+
 
     }).catch(function (error) {
     })
@@ -188,3 +190,6 @@ const checkLogin = (user,password) => {
         location.reload()
     });
 }
+
+
+

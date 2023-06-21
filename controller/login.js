@@ -11,7 +11,6 @@ getID('user').addEventListener('keyup', () => {
         getID('user').classList.remove('error')
     } else {
         // getID('user').classList.add('error')
-
     }
 })
 
@@ -50,3 +49,5 @@ getID('signIn').addEventListener('click', () => {
         getID('password').classList.add('error')
     }
 })
+
+

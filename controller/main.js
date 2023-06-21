@@ -38,7 +38,7 @@ getID('inputSearch').addEventListener('keyup', () => {
 })
 
 window.addEventListener('load', ()=> {
-    var loggedUser = JSON.parse(localStorage.getItem('userLogin'))
+    var loggedUser = JSON.parse(localStorage.getItem("userLogin"))
     if(loggedUser) {
         getID('userLogin').innerHTML = loggedUser.email
         getID('LoginContent').classList.add('checked')
@@ -52,6 +52,4 @@ getID('inforMenu').addEventListener('click',()=> {
     localStorage.removeItem("userLogin");
     getID('LoginContent').classList.remove('checked')
 })
-
-
 
