@@ -485,6 +485,39 @@ header .cart .cartNumber {
   font-weight: 800;
 }
 
+.table {
+  text-align: center;
+}
+.table tr th {
+  vertical-align: sub;
+}
+.table .table__body img {
+  width: 100%;
+}
+.table .table__body td {
+  vertical-align: middle;
+}
+.table .table__body th {
+  vertical-align: middle;
+}
+.table .edit__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table .edit__item button {
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.table .edit__item input {
+  width: 30px;
+  text-align: center;
+  margin: 0 5px;
+}
+
 .signUp .successRegister {
   font-size: 30px;
   color: #01cc65;
