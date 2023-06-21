@@ -86,8 +86,8 @@
     </nav>
   </header>
 
-  
-  
+
+
   <section class="container table">
     <table class="table">
       <thead>
@@ -104,40 +104,81 @@
           <th scope="col">Giá</th>
           <th scope="col">Số lượng</th>
           <th scope="col">Tổng tiền</th>
-          <th scope="col">Thêm/Xóa</th>
+          <th scope="col">Xóa</th>
         </tr>
       </thead>
-      <tbody>
-        <tr class="table__body">
-          <th scope="row">
-            <label>
-              <input type="checkbox">
-              <span class="checkbox-fake"></span>
-            </label>
-          </th>
-          <td>1</td>
-          <td><img src="../assets/img/shoes2.png" alt=""></td>
-          <td>Adidas Prophere Black White</td>
-          <td>450$</td>
-          <td>
-            <div class="edit__item">
-              <button>-</button>
-              <input type="" value="1">
-              <button>+</button>
-            </div>
-          </td>
-          <td>450$</td>
-          <td>
-            <div>
-              <button type="button" class="btn btn-secondary">Xóa</button>
-              <button type="button" class="btn btn-success">Thêm</button>
-            </div>
-          </td>
-        </tr>
+
+
+      <tbody id="tbody">
         
       </tbody>
     </table>
   </section>
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <header class="head-form mb-0">
+          <h2 id="header-title">Log In</h2>
+
+          <i id="closeModal" class="fa-regular fa-circle-xmark " data-dismiss="modal"></i>
+
+        </header>
+
+ 
+        <form role="form" id="form" class="login signUp">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" name="user" id="user" class="form-control input-sm">
+              <label for="user">
+                <span class="inputLogin">User</span>
+              </label>
+            </div>
+            <span class="errorNoti" id="errorEmailLogin"></span>
+
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" name="password" id="password" class="form-control input-sm">
+              <label for="password">
+                <span class="inputLogin">Password</span>
+              </label>
+            </div>
+            <span style="display: none;" class="errorNoti" id="errorPasswordLogin"></span>
+          </div>
+          <span class="errorLogin" id="errorLogin"></span>
+          
+        </form>
+
+        <div class="signInSignUp">
+          <a href="./view/signup.html" class="signUp">Sign Up</a>
+          <button class="signIn" id="signIn">Sign In</button>
+        </div>
+
+        <div class="otherLogin">
+          <span class="text">OR</span>
+        </div>
+        
+        <div class="socialLogin">
+          <a href="#">
+            <div id="container">
+              <div id="logo">
+                <div class="g-line"></div>
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+                <span class="blue"></span>
+              </div>
+            </div>
+          </a>
+          <a href="#"><i class="fa-brands fa-facebook fb"></i></a>
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+
+    </div>
+  </div>
   <footer></footer>
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -149,11 +190,15 @@
   <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="../model/cartOder.js"></script>
   <script src="../controller/Validation.js"></script>
+  <script src="../model/Shoes.js"></script>
   <script src="../controller/mainapi.js"></script>
   <script src="../controller/main.js"></script>
+  <script src="../controller/cart.js"></script>
+  <!-- <script src="../controller/detail.js"></script> -->
   <script src="../controller/login.js"></script>
-  <script src="../controller/detail.js"></script>
+
 </body>
 
 </html>
