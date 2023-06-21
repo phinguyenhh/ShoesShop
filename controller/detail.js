@@ -2,6 +2,7 @@ window.onload = function () {
     const urlID = new URLSearchParams(window.location.search)
     const id = urlID.get('productid')
     showDetail(id)
+    // console.log(id);
 }
 
 
@@ -39,3 +40,9 @@ function chooseSize() {
         })
     });
 }
+
+
+
+
+
+

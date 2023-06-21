@@ -1,5 +1,5 @@
-function Shoes(name,desc,price) {
+function Shoes(name,image,price) {
     this.name = name;
-    this.description = desc;
+    this.image = image;
     this.price = price;
 }

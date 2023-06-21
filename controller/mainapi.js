@@ -10,6 +10,13 @@ const getFeatureShoes = () => {
     });
 }
 
+window.onload = function () {
+    const urlID = new URLSearchParams(window.location.search)
+    const id = urlID.get('productid')
+    // console.log(id);
+
+}
+
 getFeatureShoes()
 
 const showFeatureShoes = (array) => {
@@ -94,7 +101,7 @@ const showDetail = (id) => {
               <button class="btn minusDetail" id="minusDetail">-</button>
           </div>
           <div class="addCartDetail">
-              <button class="btn btnATC" id="btnATC">Add to cart</button>
+              <button id="btnAddToCart">Add to cart</button>
           </div>
       </div>`
 
@@ -102,6 +109,22 @@ const showDetail = (id) => {
         chooseSize()
         showRelateShoes(arrayRelate)
         console.log(getID("btnATC"))
+
+
+
+        getID('btnAddToCart').addEventListener('click', () => {
+            getCartItem(id);
+        })
+
+
+
+
+
+        getID('btnAddToCart').addEventListener('click', () => {
+            getCartItem(id);
+        })
+
+
 
 
     }).catch(function (error) {
@@ -171,7 +194,7 @@ const showProductSearch = (array) => {
     getID("featureSearch").innerHTML = content;
 }
 
-const checkLogin = (user,password) => {
+const checkLogin = (user, password) => {
     axios({
         method: 'post',
         url: 'https://shop.cyberlearn.vn/api/Users/signin',
@@ -181,7 +204,7 @@ const checkLogin = (user,password) => {
         }
     }).then(function (result) {
         const userLogin = result.data.content
-        localStorage.setItem('userLogin',JSON.stringify(userLogin))
+        localStorage.setItem('userLogin', JSON.stringify(userLogin))
         getID('userLogin').innerHTML = userLogin.email
         getID('LoginContent').classList.add('checked')
         window.location.href = "/index.html"
@@ -190,6 +213,40 @@ const checkLogin = (user,password) => {
         location.reload()
     });
 }
+
+
+// const listProduct = new CartOder()
+
+
+
+
+
+const getCartItem = (id) => {
+    
+    axios({
+        method: 'get',
+        url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`,
+
+    }).then(function (result) {
+        // console.log(result.data.content);
+        const cartItem = result.data.content;
+        const shoe = new Shoes(cartItem.name, cartItem.image, cartItem.price)
+
+        // localStorage.setItem("listCart", JSON.stringify(cartItem))
+        listProduct.addCart(shoe);
+        setCartLocalStorage();
+        window.location.href = "../view/cart.html";
+       
+        console.log(shoe);
+        // const cartItemPush = JSON.parse(localStorage.getItem("listCart"));
+        // console.log(cartItemPush.price);
+
+    }).catch(function (error) {
+
+    });
+}
+
+
 
 
 

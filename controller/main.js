@@ -37,19 +37,21 @@ getID('inputSearch').addEventListener('keyup', () => {
     getID('aBTN').innerHTML = `<a href="../view/search.html?keyword=${inputSearch}" id="btnSearch" type="button" class="btn search-btn"><i class="fa fa-search"></i></a>`
 })
 
-window.addEventListener('load', ()=> {
-    var loggedUser = JSON.parse(localStorage.getItem("userLogin"))
-    if(loggedUser) {
+window.addEventListener('load', () => {
+    var loggedUser = JSON.parse(localStorage.getItem('userLogin'))
+    if (loggedUser) {
         getID('userLogin').innerHTML = loggedUser.email
         getID('LoginContent').classList.add('checked')
-        getID('btnLogin').disabled = true        
-        getID('btnLogin').style.opacity = "1"   
-        getID('btnLogin').style.cursor = "pointer"   
+        getID('btnLogin').disabled = true
+        getID('btnLogin').style.opacity = "1"
+        getID('btnLogin').style.cursor = "pointer"
     }
 })
 
-getID('inforMenu').addEventListener('click',()=> {
+getID('inforMenu').addEventListener('click', () => {
     localStorage.removeItem("userLogin");
     getID('LoginContent').classList.remove('checked')
 })
+
+
 

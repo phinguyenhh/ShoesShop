@@ -3,28 +3,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shoes shop</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoes shop</title>
 
-    <!-- BS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- BS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <!-- scss => trình duyệt web không hiểu
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- scss => trình duyệt web không hiểu
     chỉ hiểu css
     live sass => biên dịch scss => css -->
-    <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 
 <body>
@@ -86,103 +86,106 @@
     </nav>
   </header>
 
-    <section class="detailShoes pt-5">
-        <div class="container">
-            <div class="row" id="detailShoe">
-            </div>
-        </div>
-    </section>
-
-    <section class="relateShoes">
-        <div class="container">
-            <h1>-Related Product -</h1>
-            <div class="row" id="relateShoe">
-            </div>
-        </div>
-    </section>
-
-    <div class="modal fade" id="myModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-  
-          <header class="head-form mb-0">
-            <h2 id="header-title">Log In</h2>
-  
-            <i id="closeModal" class="fa-regular fa-circle-xmark " data-dismiss="modal"></i>
-  
-          </header>
-  
-   
-          <form role="form" id="form" class="login signUp">
-            <div class="form-group">
-              <div class="input-group">
-                <input type="text" name="user" id="user" class="form-control input-sm">
-                <label for="user">
-                  <span class="inputLogin">User</span>
-                </label>
-              </div>
-              <span class="errorNoti" id="errorEmailLogin"></span>
-  
-            </div>
-            <div class="form-group">
-              <div class="input-group">
-                <input type="text" name="password" id="password" class="form-control input-sm">
-                <label for="password">
-                  <span class="inputLogin">Password</span>
-                </label>
-              </div>
-            <span class="errorNoti" id="errorPasswordLogin"></span>
-
-            </div>
-            <span class="errorLogin" id="errorLogin"></span>
-  
-  
-          </form>
-  
-          <div class="signInSignUp">
-            <a href="./view/signup.html" class="signUp">Sign Up</a>
-            <button class="signIn" id="signIn">Sign In</button>
-          </div>
-          <div class="otherLogin">
-            <span class="text">OR</span>
-          </div>
-          <div class="socialLogin">
-            <a href="#">
-              <div id="container">
-                <div id="logo">
-                  <div class="g-line"></div>
-                  <span class="red"></span>
-                  <span class="yellow"></span>
-                  <span class="green"></span>
-                  <span class="blue"></span>
-                </div>
-              </div>
-            </a>
-            <a href="#"><i class="fa-brands fa-facebook fb"></i></a>
-          </div>
-        </div>
-  
-        <!-- Modal footer -->
-  
+  <section class="detailShoes pt-5">
+    <div class="container">
+      <div class="row" id="detailShoe">
       </div>
     </div>
+  </section>
 
-    <footer></footer>
+  <section class="relateShoes">
+    <div class="container">
+      <h1>-Related Product -</h1>
+      <div class="row" id="relateShoe">
+      </div>
+    </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
 
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <header class="head-form mb-0">
+          <h2 id="header-title">Log In</h2>
+
+          <i id="closeModal" class="fa-regular fa-circle-xmark " data-dismiss="modal"></i>
+
+        </header>
+
+
+        <form role="form" id="form" class="login signUp">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" name="user" id="user" class="form-control input-sm">
+              <label for="user">
+                <span class="inputLogin">User</span>
+              </label>
+            </div>
+            <span class="errorNoti" id="errorEmailLogin"></span>
+
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" name="password" id="password" class="form-control input-sm">
+              <label for="password">
+                <span class="inputLogin">Password</span>
+              </label>
+            </div>
+            <span class="errorNoti" id="errorPasswordLogin"></span>
+
+          </div>
+          <span class="errorLogin" id="errorLogin"></span>
+
+
+        </form>
+
+        <div class="signInSignUp">
+          <a href="./view/signup.html" class="signUp">Sign Up</a>
+          <button class="signIn" id="signIn">Sign In</button>
+        </div>
+        <div class="otherLogin">
+          <span class="text">OR</span>
+        </div>
+        <div class="socialLogin">
+          <a href="#">
+            <div id="container">
+              <div id="logo">
+                <div class="g-line"></div>
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+                <span class="blue"></span>
+              </div>
+            </div>
+          </a>
+          <a href="#"><i class="fa-brands fa-facebook fb"></i></a>
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+
+    </div>
+  </div>
+
+  <footer></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   <script src="../controller/Validation.js"></script>
+  <script src="../model/cartOder.js"></script>
+  <script src="../model/Shoes.js"></script>
   <script src="../controller/mainapi.js"></script>
   <script src="../controller/main.js"></script>
   <script src="../controller/login.js"></script>
-    <script src="../controller/detail.js"></script>
+  <script src="../controller/detail.js"></script>
+  <script src="../controller/cart.js"></script>
 </body>
 
 </html>

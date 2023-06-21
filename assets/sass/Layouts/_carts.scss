@@ -1,0 +1,39 @@
+
+
+.table{
+    text-align: center;
+    tr{
+        th{
+            vertical-align: sub;
+        }
+    }
+    .table__body{
+        img{
+            width: 30%;
+        }
+        td{
+            vertical-align: middle;
+        }
+        th{
+            vertical-align: middle;
+        }
+    }
+    .edit__item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button{
+            width: 23px;
+            height: 23px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        input{
+            width: 30px;
+            text-align: center;
+            margin: 0 5px;
+        }
+    }
+}
