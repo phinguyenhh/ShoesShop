@@ -12,7 +12,7 @@ const showCartItem = (cartProducts) => {
         <td>1</td>
         <td><img src="${cartProduct.image}" alt=""></td>
         <td>${cartProduct.name}</td>
-        <td>${cartProduct.price}</td>
+        <td>${cartProduct.price}$</td>
         <td>
           <div class="edit__item">
             <button>-</button>
@@ -20,7 +20,7 @@ const showCartItem = (cartProducts) => {
             <button>+</button>
           </div>
         </td>
-        <td>450$</td>
+        <td>${cartProduct.price*cartProduct.qty}$</td>
         <td>
           <div>
             <button onclick="deleteProduct('${cartProduct.id}')" type="button" class="btn btn-secondary">Xóa</button>
