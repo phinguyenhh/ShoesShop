@@ -51,3 +51,4 @@ getID('signIn').addEventListener('click', () => {
 })
 
 
+quantityCart()

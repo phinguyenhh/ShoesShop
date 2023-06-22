@@ -4,8 +4,6 @@ window.onload = function () {
     showDetail(id)
 }
 
-
-
 function quantityDetail() {
     let i = 1;
 

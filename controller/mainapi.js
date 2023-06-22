@@ -101,7 +101,6 @@ const showDetail = (id) => {
         showRelateShoes(arrayRelate)
         getID('btnAddToCart').addEventListener('click', () => {
             getCartItem(id);
-
         })
     }).catch(function (error) {
     })
@@ -217,6 +216,8 @@ const getCartItem = (id) => {
                 }
         }
         window.location.href = "../view/cart.html"
+        quantityCart()
+
     }).catch(function (error) {
         console.log(error)
     });
