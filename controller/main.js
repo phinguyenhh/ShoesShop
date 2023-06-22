@@ -38,7 +38,8 @@ getID('inputSearch').addEventListener('keyup', () => {
 })
 
 window.addEventListener('load', () => {
-    var loggedUser = JSON.parse(localStorage.getItem('userLogin'))
+    const loggedUser = JSON.parse(localStorage.getItem('userLogin'))
+
     if (loggedUser) {
         getID('userLogin').innerHTML = loggedUser.email
         getID('LoginContent').classList.add('checked')
@@ -53,5 +54,15 @@ getID('inforMenu').addEventListener('click', () => {
     getID('LoginContent').classList.remove('checked')
 })
 
+function setCartLocalStorage() {
+    localStorage.setItem('listCartItem', JSON.stringify(listProduct.arrayCart))
+}
+function getCartLocalStorage() {
+    const cartProduct = JSON.parse(localStorage.getItem("listCartItem"));
+    if (cartProduct != null) {
+        listProduct.arrayCart = cartProduct;
+    }
+    return  listProduct.arrayCart
+}
 
 

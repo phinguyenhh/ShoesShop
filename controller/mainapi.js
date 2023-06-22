@@ -1,4 +1,3 @@
-
 const getFeatureShoes = () => {
     axios({
         method: 'get',
@@ -8,13 +7,6 @@ const getFeatureShoes = () => {
     }).catch(function (error) {
 
     });
-}
-
-window.onload = function () {
-    const urlID = new URLSearchParams(window.location.search)
-    const id = urlID.get('productid')
-    // console.log(id);
-
 }
 
 getFeatureShoes()
@@ -104,29 +96,13 @@ const showDetail = (id) => {
               <button id="btnAddToCart">Add to cart</button>
           </div>
       </div>`
-
         quantityDetail()
         chooseSize()
         showRelateShoes(arrayRelate)
-        console.log(getID("btnATC"))
-
-
-
         getID('btnAddToCart').addEventListener('click', () => {
             getCartItem(id);
+
         })
-
-
-
-
-
-        getID('btnAddToCart').addEventListener('click', () => {
-            getCartItem(id);
-        })
-
-
-
-
     }).catch(function (error) {
     })
 }
@@ -213,36 +189,36 @@ const checkLogin = (user, password) => {
         location.reload()
     });
 }
-
-
-// const listProduct = new CartOder()
-
-
-
-
+const listProduct = new CartOder()
 
 const getCartItem = (id) => {
-    
+
     axios({
         method: 'get',
         url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`,
 
     }).then(function (result) {
-        // console.log(result.data.content);
+        getCartLocalStorage()
         const cartItem = result.data.content;
-        const shoe = new Shoes(cartItem.name, cartItem.image, cartItem.price)
-
-        // localStorage.setItem("listCart", JSON.stringify(cartItem))
-        listProduct.addCart(shoe);
-        setCartLocalStorage();
-        window.location.href = "../view/cart.html";
-       
-        console.log(shoe);
-        // const cartItemPush = JSON.parse(localStorage.getItem("listCart"));
-        // console.log(cartItemPush.price);
-
+        const qty = +getID('quantity').textContent
+        const shoe = new Shoes(cartItem.id, cartItem.name, cartItem.image, cartItem.price, qty)
+        if (listProduct.arrayCart.length < 1) {
+            listProduct.addCart(shoe);
+            setCartLocalStorage()
+        } else {
+          const checked = listProduct.arrayCart.find( product => product.id == shoe.id )
+                 if (checked) {
+                     checked.qty += shoe.qty
+                    setCartLocalStorage()
+                }
+                else {
+                    listProduct.addCart(shoe);
+                    setCartLocalStorage()
+                }
+        }
+        window.location.href = "../view/cart.html"
     }).catch(function (error) {
-
+        console.log(error)
     });
 }
 
