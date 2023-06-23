@@ -222,7 +222,6 @@ const getCartItem = (id) => {
                 }
         }
         window.location.href = "../view/cart.html"
-        quantityCart()
 
     }).catch(function (error) {
         console.log(error)

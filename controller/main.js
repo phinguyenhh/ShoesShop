@@ -75,3 +75,7 @@ getID('cartHeader').addEventListener('click',()=>{
     getID('userLogin').click()
  }
 })
+
+
+getCartLocalStorage()
+document.querySelector('.cartNumber').innerHTML = listProduct.arrayCart.length
