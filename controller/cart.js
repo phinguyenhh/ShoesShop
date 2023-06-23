@@ -58,8 +58,9 @@ document.getElementById('masterCheckBox').addEventListener('click', () => {
   }
 })
 
-// document.getElementById('deleteAllCart').addEventListener('click', () => {
-//   listProduct.arrayCart = []
-//   showCartItem(listProduct.arrayCart)
-//   setCartLocalStorage()
-// })
+document.getElementById('deleteAllCart').addEventListener('click', () => {
+  listProduct.arrayCart = []
+  showCartItem(listProduct.arrayCart)
+  setCartLocalStorage()
+  document.getElementById('sumaryCart').innerHTML = `Tất cả(${listProduct.arrayCart.length})sản phẩm`
+})

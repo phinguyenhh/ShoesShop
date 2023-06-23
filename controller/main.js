@@ -37,8 +37,8 @@ getID('inputSearch').addEventListener('keyup', () => {
     getID('aBTN').innerHTML = `<a href="../view/search.html?keyword=${inputSearch}" id="btnSearch" type="button" class="btn search-btn"><i class="fa fa-search"></i></a>`
 })
 
+const loggedUser = JSON.parse(localStorage.getItem('userLogin'))
 window.addEventListener('load', () => {
-    const loggedUser = JSON.parse(localStorage.getItem('userLogin'))
 
     if (loggedUser) {
         getID('userLogin').innerHTML = loggedUser.email
@@ -66,3 +66,12 @@ function getCartLocalStorage() {
 }
 
 
+getID('cartHeader').addEventListener('click',()=>{
+ if (loggedUser) {
+     window.location.href = "../view/cart.html"
+ }
+ else {
+    alert("Xin mời đăng nhập để dùng tính năng này!")
+    getID('userLogin').click()
+ }
+})

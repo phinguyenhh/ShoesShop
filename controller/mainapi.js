@@ -100,7 +100,13 @@ const showDetail = (id) => {
         chooseSize()
         showRelateShoes(arrayRelate)
         getID('btnAddToCart').addEventListener('click', () => {
-            getCartItem(id);
+            if (loggedUser) {
+                getCartItem(id);
+            }
+            else {
+                alert("Xin mời đăng nhập để dùng tính năng này!")
+                getID('userLogin').click()
+            }
         })
     }).catch(function (error) {
     })
